@@ -1,0 +1,12 @@
+{% if include.post %}
+  {% assign tags = include.post.tags %}
+{% else %}
+  {% assign tags = page.tags %}
+{% endif %}
+
+<span class="tags">
+  Tags:&nbsp;
+  {% for tag in tags %}
+    <a href="{{ site.baseurl }}/tags/#{{ tag }}">#{{ tag }}</a>
+  {% endfor %}
+</span>

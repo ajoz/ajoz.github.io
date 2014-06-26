@@ -1,0 +1,11 @@
+- url: /
+  title: Home
+
+- url: /tags
+  title: Tags
+
+- url: /search
+  title: Search
+
+- url: /about
+  title: About

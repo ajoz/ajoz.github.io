@@ -1,0 +1,34 @@
+﻿# encoding: utf-8 
+# Site settings
+title: Andrzej Jóźwiak - Blog
+author: Andrzej Jóźwiak
+description: My blog about software design, programming and all this stuff...
+baseurl:
+url: http://ajoz.github.io
+
+customsearch: 009323121844837138787:of8o9eokxrs
+
+# Build settings
+markdown: redcarpet
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+
+permalink: pretty
+highlighter: pygments
+
+kramdown:
+  auto_ids: true
+  input: GFM
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
+
+redcarpet:
+  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
+  
+sass:
+  sass_dir: public/css
+  style: :compressed  
+  
+  
+gems:
+  - jekyll-sitemap

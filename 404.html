@@ -1,0 +1,30 @@
+---
+layout: none
+title: Limbo
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <div class="container azule">
+      <header class="top row gutters">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="{{ site.url }}" id="logo" title="{{ site.data.brume.name }}"
+             style="background-image: url({{site.baseurl}}/public/images/logo.png);"></a>
+        </div>
+        {% include navigation.html %}
+      </header>
+
+      <div class="container not-found">
+        <h1 class="bounceInDown animated">404</h1>
+        <p>
+          Did You steal the content from me? No?! Well, somebody did, and you're the only one here.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

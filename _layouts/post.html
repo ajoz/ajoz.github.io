@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<section class="paging">
+  {% if page.previous %}
+    <a class="arrow left" href="{{ site.baseurl }}{{ page.previous.url }}"></a>
+  {% endif %}
+  {% if page.next %}
+    <a class="arrow right" href="{{ site.baseurl }}{{ page.next.url }}"></a>
+  {% endif %}
+</section>
+
+<article class="single row gutters fadeInLeft animated">
+  <time class="published" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time>
+  <h2>{{ page.title }}</h2>
+
+  {{ content }}
+
+  <div class="muted bundle">
+    {% include taglist.html %}
+    &nbsp;&middot;&nbsp;
+    <a href="{{ page.permalink }}">Permalink</a>
+  </div>
+
+  {% if page.disqus %}
+    {% include disqus.html %}
+  {% endif %}
+</article>

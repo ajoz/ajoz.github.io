@@ -8,6 +8,7 @@
     <p>
     {{ include.post.excerpt || remove: "<p>" || remove: "</p>"}}
     <br/>
+    <br/>
     <a href="{{ site.baseurl }}{{ include.post.url }}">Read more</a>
     </p>
   {% else %}

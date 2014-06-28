@@ -24,6 +24,11 @@ kramdown:
 
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
+
+
+rdiscount:
+  extensions: ["autolink", "footnotes", "generate_toc", "smart"]
+  toc_token: "[TOC]"
   
 sass:
   sass_dir: public/css

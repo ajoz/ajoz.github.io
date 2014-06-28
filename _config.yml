@@ -6,7 +6,7 @@ description: My blog about software design, programming and all this stuff...
 baseurl:
 url: http://ajoz.github.io
 
-customsearch: 009323121844837138787:of8o9eokxrs
+customsearch: 009777578059784488631:8kibs8jmyma
 
 # Build settings
 markdown: redcarpet
@@ -28,7 +28,6 @@ redcarpet:
 sass:
   sass_dir: public/css
   style: :compressed  
-  
   
 gems:
   - jekyll-sitemap

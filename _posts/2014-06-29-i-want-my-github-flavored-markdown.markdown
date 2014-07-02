@@ -61,6 +61,7 @@ markdown: rdiscount
 
 rdiscount:
   extensions: ["autolink", "footnotes", "generate_toc", "smart"]
+  toc_token: "[TOC]"
 ```
 
 There were few problems:
@@ -69,7 +70,7 @@ There were few problems:
 - syntax highlighting was not working when applied with fenced code blocks
 - no footnotes: `[^1]` although promised on the project site 
 
-At least table of contents worked.
+At least table of contents worked but not without some trouble. Although I added `generate_toc` on the extensions list it didn't appear with the keyword `[TOC]` that github was using. It seems you need to explicitly specify the keyword with the `toc_token` and believe me it was hard to find.
 
 The last one I've checked was `redcarpet`, its supposed to be the best suited for me as `github` is [working](https://github.com/blog/832-rolling-out-the-redcarpet) on it and deploying it on their machines.
 

@@ -91,6 +91,7 @@ And this is it. I would love to hear more about the architecture that is behind 
 ### Sztuka uczenia się na błędach innych - Jakub Kubryński
 
 This was a really really really -- did I remember to say really? -- nice talk. Jakub showed all the problems that occur in projects:
+
 * **silver bullet** - one technology for everything, this reminded me about one company that used stored procedures in the database for everything and by everything i really mean everything
 * **proof of concept** - there is a major flaw in this technique as we automatically look for confirmations of our ideas and not look for their problems
 * there are **two types of complexity**: essential and accidental. Essential comes with the problem we try to find solution for, accidental comes with the technologies we use, mistakes we make. People often want to discuss the accidental complexity rather then essential

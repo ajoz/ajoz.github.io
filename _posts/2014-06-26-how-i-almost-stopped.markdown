@@ -1,6 +1,7 @@
 ---
 layout: post
 date: 26-06-2014
+author: Andrzej Jóźwiak
 title: How I almost stopped loving SourceTree
 tags: git bitbucket sourcetree mercurial github
 disqus: true
@@ -27,25 +28,23 @@ So I have started looking:
 2. Maybe the user name is kept directly with repository settings:
 
     > Menu > Repository > Repository Settings > Remotes
-    
+
     Then I've picked my repository and after using `edit` I could change the user name in `Remote details`. Unfortunately I was wrong.
 
 3. It should be in the main app settings:
 
     > Menu > Tools > Options > General
-    
+
     There is a `Default user information` field there with the user name. Unfortunately I was wrong.
 
 4. SourceTree is probably taking those information from GIT / System. From the command line I used:
 
     > `git config --global`
-    
+
     And guess what? Unfortunately I was wrong.
-    
+
 As I was using SourceTree on Windows, I was really close to reinstalling it (As it's the most common fix on Windows for everything) but I have started digging in settings and I have finally found it:
 
 > Menu > Tools > Options > Authentication > Default User Names
 
 Changing the user name for `github.com` fixed my problem.
-
-

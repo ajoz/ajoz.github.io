@@ -1,4 +1,4 @@
-﻿# encoding: utf-8 
+# encoding: utf-8 
 # Site settings
 title: Andrzej Jóźwiak - Blog
 author: Andrzej Jóźwiak
@@ -20,7 +20,7 @@ kramdown:
   input: GFM
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  use_coderay: false
+  enable_coderay: false
 
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]

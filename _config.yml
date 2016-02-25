@@ -1,4 +1,4 @@
-# encoding: utf-8 
+# encoding: utf-8
 # Site settings
 title: Andrzej Jóźwiak - Blog
 author: Andrzej Jóźwiak
@@ -9,7 +9,7 @@ url: http://ajoz.github.io
 customsearch: 009777578059784488631:8kibs8jmyma
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 
 permalink: pretty
@@ -25,14 +25,13 @@ kramdown:
 redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
 
-
 rdiscount:
   extensions: ["autolink", "footnotes", "generate_toc", "smart"]
   toc_token: "[TOC]"
-  
+
 sass:
   sass_dir: public/css
-  style: :compressed  
-  
+  style: :compressed
+
 gems:
   - jekyll-sitemap

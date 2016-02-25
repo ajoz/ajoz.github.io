@@ -1,13 +1,11 @@
 ---
 layout: post
-date: 13-02-2007
+date: 17-02-2007
 author: Andrzej Jóźwiak
-title: [PL] FreeBSD - przydatne polecenia
-tags: freebsd unix commands shell
+title: FreeBSD - przydatne polecenia
+tags: freebsd unix shell commands
 disqus: true
 ---
-
-Trochę przydatnych poleceń lub jak kto woli sztuczki i kruczki.
 
 W systemie FreeBSD istnieje wiele prostych lecz bardzo przydatnych narzędzi i poleceń zaprojektowanych tak aby praca z systemem była jak najłatwiejsza. Nieważne jest jak długo pracuje się z systemem z rodziny Unix zawsze znajdzie się nowe skróty i sposoby wykonywania swoich codziennych zadań efektywniej.
 

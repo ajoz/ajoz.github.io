@@ -13,7 +13,7 @@ markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 
 permalink: pretty
-highlighter: pygments
+highlighter: rouge
 
 kramdown:
   auto_ids: true
@@ -21,13 +21,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
-redcarpet:
-  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
-
-rdiscount:
-  extensions: ["autolink", "footnotes", "generate_toc", "smart"]
-  toc_token: "[TOC]"
 
 sass:
   sass_dir: public/css

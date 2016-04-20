@@ -9,6 +9,32 @@ disqus: true
 
 W jaki sposób zapewnić skuteczną ochronę zasobów systemu komputerowego? Można ów system ogrodzić, oddzielić od „sieci” i postawić przy nim wartownika. Jednak rozwiązaniem mniej kosztownym niż strażnik, który udostępnia każdemu użytkownikowi systemu terminal dostępowy, jest ścisła i „niezawodna” identyfikacja. Identyfikacja ta ma zapewnić ochronę przed nieautoryzowanym dostępem, sprawdzić, czy są użytkownicy potrzebujący uzyskać zasoby systemu oraz w jaki sposób chcą je wykorzystać. W idealnej sytuacji jakakolwiek identyfikacja mająca ochraniać dane nie byłaby konieczna. Jednak, gdy administrator musi borykać się z problemami „złośliwych” programów, słabo wyszkolonych użytkowników, włamywaczy szukających cennych danych, jak i tych, którzy chcieliby zniszczyć system, powinien mieć narzędzia i metody pozwalające na kontrolę dostępu do zasobów systemu komputerowego.
 
+- [Modele identyfikacji](#)
+    - [Kategoria bycia](#)
+    - [Kategoria posiadania](#)
+    - [Kategoria wiedzy](#)
+- [Hasła](#)
+    - [Przyczyny stosowania haseł](#)
+    - [Postać hasła](#)
+- [Formaty plików „z hasłami”](#)
+    - [Linux](#)
+    - [FreeBSD](#)
+    - [Windows NT](#)
+    - [Zmiana hasła](#)
+- [Ataki na systemy haseł](#)
+- [Inne modele identyfikacji](#)
+    - [Identyfikacja „wyzwanie – odpowiedź”](#)
+    - [Wykorzystanie kluczy publicznych](#)
+- [PAM - Wprowadzenie](#)
+    - [PAM - Cele](#)
+    - [PAM – Scenariusz wykorzystania](#)
+    - [PAM - Moduły](#)
+    - [PAM - Konfiguracja systemu](#)
+    - [PAM - /etc/pam.conf](#)
+    - [PAM - /etc/pam.d](#)
+    - [PAM – Przykładowe wpisy konfiguracyjne](#)
+    - [PAM - Narzędzia i moduły](#)
+
 ### Modele identyfikacji
 Identyfikacja bytu jakim może być: `osoba`, `host`, `terminal` inteligentny oraz program, może być rozpatrywana jako weryfikacja tego bytu w 3 kategoriach:
 
@@ -20,7 +46,9 @@ Identyfikacja bytu jakim może być: `osoba`, `host`, `terminal` inteligentny or
 
 Pierwsza kategoria nazywana jest także `user identificaction`. Każdy użytkownik w systemie cechuje się pewnymi unikalnymi właściwościami. W literaturze nazywa się je indywidualnymi cechami osobniczymi. Czy takie niepowtarzalne cechy mogą być podstawą identyfikacji?
 
-Otóż jak dobrze wiemy odciski palców uznane są za niepowtarzalną `własność`, zatem sąd uznaje je za dowód nie do podważenia. Wymyślono więc urządzenia do identyfikacji linii papilarnych (`AFIM` – automated fingerprint identification machines), jednak maszyny takie są drogie a możliwość ich wykorzystania dość ograniczona. Na podobnej zasadzie działają wszelkie systemy stwierdzające inne niepowtarzalne cechy jak badanie struktury siatkówki i tęczówki oka. Jednak mimo tego, iż prawdopodobieństwo błędnej akceptacji jest w ich przypadku naprawdę małe, wysoka cena specjalistycznych urządzeń dyskwalifikuje tą metodę do masowych zastosowań . Kolejne nie mniej ciekawe metody identyfikacji to badanie topografii dłoni lub geometrii twarzy. Wspomniane wyżej metody mają ważną zaletę, nie wiążą się z dość nieprzyjemnym zabiegiem jak np.: skanowanie gałki ocznej, ale ich prawdopodobieństwo błędnej identyfikacji jest znacznie większe niż w przypadku badania siatkówki. Systemy sprawdzające geometrie twarzy mogą służyć nie tylko jako medium autoryzujące, lecz mogą pomagać np.: w wyszukiwaniu terrorystów wśród pasażerów na lotnisku. Podpis odręczny jest sam w sobie pewnym zbiorem cech człowieka wynikającym z nawyków takich jak nacisk i kierunek prowadzenia pióra, styl pisma, w tym nachylenie liter, szybkość pisania itp. Podobna do tej metody może być identyfikacja na podstawie rytmu i tempa naciskania klawiszy. Jednak wiąże się to z wyposażeniem klawiatury w dodatkowe czujniki rejestrujące „parametry stukania w klawisze”. Aby ten opis metod identyfikacji był kompletny należy wspomnieć o identyfikacji na podstawie kodu DNA. Teoretycznie prawdopodobieństwo błędu jest tu równe zeru, ale obecnie metodę tę stosować można jedynie w specjalistycznych laboratoriach.
+Otóż jak dobrze wiemy odciski palców uznane są za niepowtarzalną `własność`, zatem sąd uznaje je za dowód nie do podważenia. Wymyślono więc urządzenia do identyfikacji linii papilarnych (`AFIM` – automated fingerprint identification machines), jednak maszyny takie są drogie a możliwość ich wykorzystania dość ograniczona.
+
+Na podobnej zasadzie działają wszelkie systemy stwierdzające inne niepowtarzalne cechy jak badanie struktury siatkówki i tęczówki oka. Jednak mimo tego, iż prawdopodobieństwo błędnej akceptacji jest w ich przypadku naprawdę małe, wysoka cena specjalistycznych urządzeń dyskwalifikuje tą metodę do masowych zastosowań . Kolejne nie mniej ciekawe metody identyfikacji to badanie topografii dłoni lub geometrii twarzy. Wspomniane wyżej metody mają ważną zaletę, nie wiążą się z dość nieprzyjemnym zabiegiem jak np.: skanowanie gałki ocznej, ale ich prawdopodobieństwo błędnej identyfikacji jest znacznie większe niż w przypadku badania siatkówki. Systemy sprawdzające geometrie twarzy mogą służyć nie tylko jako medium autoryzujące, lecz mogą pomagać np.: w wyszukiwaniu terrorystów wśród pasażerów na lotnisku. Podpis odręczny jest sam w sobie pewnym zbiorem cech człowieka wynikającym z nawyków takich jak nacisk i kierunek prowadzenia pióra, styl pisma, w tym nachylenie liter, szybkość pisania itp. Podobna do tej metody może być identyfikacja na podstawie rytmu i tempa naciskania klawiszy. Jednak wiąże się to z wyposażeniem klawiatury w dodatkowe czujniki rejestrujące „parametry stukania w klawisze”. Aby ten opis metod identyfikacji był kompletny należy wspomnieć o identyfikacji na podstawie kodu DNA. Teoretycznie prawdopodobieństwo błędu jest tu równe zeru, ale obecnie metodę tę stosować można jedynie w specjalistycznych laboratoriach.
 
 #### Kategoria posiadania
 
@@ -37,9 +65,21 @@ Hasła jest to najbardziej popularna technika weryfikacji użytkownika. Hasło p
 Po co więc używać haseł? Przecież w przypadku systemów „biurkowych” nie wymaga się stosowania haseł. Utrudniają one niejako pracę użytkownikom korzystającym ze wspólnego sprzętu (w tym także danych dyskowych). W przypadku grup badawczych, które pracowały nad Unixem było podobnie. „Wiele grup badawczych nie używało haseł dla użytkowników indywidualnych – często z tego samego powodu, z jakiego wstydzili się zamków w szufladach swoich biurek i w drzwiach swoich biur. W tych środowiskach zaufanie, szacunek i dobre obyczaje stanowiły silną broń przeciw kradzieżom i destrukcji.” Dzisiaj jesteśmy wstanie sobie wyobrazić co mógłby uczynić napastnik w tak niezabezpieczonym systemie. Hasła są jedną z form ochrony mającą przeciwdziałać (lub niestety tylko utrudniać) kradzieży danych, wyników, nieuczciwej konkurencji jak i niszczeniu danych przez przypadkowych napastników.
 
 #### Postać hasła
-Konkretna postać hasła jest wymuszana przez specyfikę urządzenia (systemu) z którego docelowo ma korzystać użytkownik. Dobrym przykładem może być klawiatura bankomatu, zawierająca jedynie klawisze cyfr, lub klawiatura telefonu. Wymuszają one stricte numeryczną postać haseł (w omawianym przypadku bankomatu najlepszym przykładem jest numer identyfikacji osobistej tzw. kod PIN – Personal Identification Number). Hasło nie powinno być zbyt długie aby przeciętny użytkownik mógł je zapamiętać, w praktyce wychodzi, że hasła powinny składać się z czterech do dziewięciu znaków. W przypadku hasła n znakowego, wykorzystującego 26 liter (małe i duże litery nie są rozróżnialne) prawdopodobieństwo odgadnięcia hasła wynosi 26^-n (pod warunkiem, że założymy iż każde z 26^n słów może wystąpić z jednakowym prawdopodobieństwem). Co się stanie gdy rozróżnimy wielkie i małe litery w haśle? Posiądziemy dzięki temu 52n równie prawdopodobnych słów. Prawdopodobieństwo odgadnięcia hasła jeszcze bardziej zmaleje gdy dopuścimy w haśle obecność cyfr oraz wszystkich „drukowalnych” znaków specjalnych takich jak np.: „ , . ; : ‘ [ ] { } ( ) * & ^ % $ # @ ! „ Istnieje jednak pewne niebezpieczeństwo związane z użyciem tych znaków w haśle, np.: xdm odfiltrowuje znaki specjalne (na myśli mam tutaj znaki: ^@, ^G, ^H, ^[ itp.). Powinno się także wystrzegać znaków mogących powodować interakcję z terminalem (np.: ^L), lub znaków: „\”, „#”, „@” które jeszcze w niektórych Unixach traktowane są jako odpowiednio: „escape”, „erase” i „kill”.
+
+Konkretna postać hasła jest wymuszana przez specyfikę urządzenia (systemu) z którego docelowo ma korzystać użytkownik. Dobrym przykładem może być klawiatura bankomatu, zawierająca jedynie klawisze cyfr, lub klawiatura telefonu. Wymuszają one stricte numeryczną postać haseł (w omawianym przypadku bankomatu najlepszym przykładem jest numer identyfikacji osobistej tzw. kod `PIN` – Personal Identification Number). Hasło nie powinno być zbyt długie aby przeciętny użytkownik mógł je zapamiętać, w praktyce wychodzi, że hasła powinny składać się z czterech do dziewięciu znaków.
+
+W przypadku hasła n znakowego, wykorzystującego 26 liter (małe i duże litery nie są rozróżnialne) prawdopodobieństwo odgadnięcia hasła wynosi `26^n` (pod warunkiem, że założymy iż każde z `26^n` słów może wystąpić z jednakowym prawdopodobieństwem). Co się stanie gdy rozróżnimy wielkie i małe litery w haśle?
+
+Posiądziemy dzięki temu `52^n` równie prawdopodobnych słów. Prawdopodobieństwo odgadnięcia hasła jeszcze bardziej zmaleje gdy dopuścimy w haśle obecność cyfr oraz wszystkich „drukowalnych” znaków specjalnych takich jak np.:
+
+```
+ „ , . ; : ‘ [ ] { } ( ) * & ^ % $ # @ !
+```
+
+ Istnieje jednak pewne niebezpieczeństwo związane z użyciem tych znaków w haśle, np.: `xdm` odfiltrowuje znaki specjalne (na myśli mam tutaj znaki: ^@, ^G, ^H, ^[ itp.). Powinno się także wystrzegać znaków mogących powodować interakcję z terminalem (np.: ^L), lub znaków: `\`, `#`, `@` które jeszcze w niektórych Unixach traktowane są jako odpowiednio: `escape`, `erase` i `kill`.
 
 Czego unikać przy wyborze hasła? Przedstawić można oczywistą listę:
+
 + imion i nazwisk, także imion zwierząt domowych lub ksywek
 + nazwy używanego systemu, nazwy komputera w sieci
 + wszelkich łatwych do odnalezienia numerów (nr telefonu, nr rejestracyjny, data urodzenia)
@@ -47,12 +87,14 @@ Czego unikać przy wyborze hasła? Przedstawić można oczywistą listę:
 + prostych wzorów, jak np. znany wszystkim „qwerty”
 
 Jak zbudowane jest więc dobre hasło? Oto recepta:
+
 + małe i wielkie litery występujące jednocześnie
 + cyfry i znaki interpunkcyjne pomieszane z literami
 + przynajmniej siedmioznakowe
 + daje się szybko wpisać :D
 
 Z doborem hasła wiąże się pewna historyjka.
+
 Na jednej uczelni często zdarzało się, że studenci zmieniali hasła i nie mogli się później zalogować na swoje konta. Równie często zdarzały się próby umieszczania znaków sterujących w haśle, jak i pomyłka podczas tworzenia hasła uniemożliwiająca późniejsze zalogowanie się. Studenci przychodzili więc ze swoimi legitymacjami do administratorów uczelnianego systemu, gdzie zmieniano im hasła na zwrot: „ChangeMe” (Zmień mnie). Pracownicy instruowali studentów, aby na końcu korytarza w pomieszczeniu z terminalami zmienili swoje hasła. Po pewnym czasie jeden z pracowników postanowił uruchomić program łamiący hasła, z przerażeniem odkrył, że przeważająca większość studentów miała hasło „ChangeMe”. Miał je nawet jeden z pracowników uczelni. Od tej pory pracownicy i studenci zmieniali swoje hasła na miejscu.
 
 Bezpieczeństwo określonego hasła maleje sukcesywnie wraz z jego kolejnym użyciem. W związku z tym trzeba ograniczyć jego ważność do określonego przedziału czasowego, typowo wahającego się między trzema tygodniami a trzema miesiącami. W ekstremalnym przypadku ograniczamy się do jednokrotnego użycia hasła. Systemy haseł jednokrotnego użycia opierają się na wygenerowaniu dla każdego z użytkowników listy haseł oraz określenia kolejności w jakiej poszczególne pozycje z wygenerowanej listy mają być używane.
@@ -63,7 +105,7 @@ Nawet najlepiej przygotowane hasło lub hasła nie będą bezpieczne jeżeli wyb
 + Nie używać haseł logowania jako haseł do różnych programów. Hasła na serwerach gier typu MUD są zarządzane i określona grupa ludzi ma do nich wgląd.
 + Nie używać tego samego hasła dla różnych komputerów zarządzanych przez różne organizacje.
 
-Z ostatnim „nie” jest najwięcej problemów, przekonał się o tym Alec Muffet, autor programu "Crack", który opowiedział kiedyś taką historię - pewien student, przyjaciel Aleca, Bob odbywał podczas przerwy semestralnej praktyki w dużej firmie komputerowej. W weekendy wracał na uczelnię i grał w grę AberMUD (gra sieciowa) na komputerze Aleca. Jednym z obowiązków Boba w firmie, w której odbywał praktykę było zarządzanie systemem komputerowym. Firmie bardzo zależało na bezpieczeństwie swojego systemu, dlatego wszystkie hasła użytkowników były ciągami przypadkowych liter i cyfr nie mających razem żadnego sensu. Pewnego dnia Alec włączył hasła gry "AberMUD" do powstającej wersji słownika programu "Crack". Włączył te hasła dlatego, że były zapisane w jego komputerze w pliku w postaci niezaszyfrowanej. Gdy słownik był już wstępnie skompletowany Alec w celach testowych włączył go w systemie uczelnianym, okazało się, że program trafił na kilka haseł studenckich. Alec kazał swoim studentom zmienić hasła i zapomniał o całej sprawie. Gdy program "Crack" był już gotowy Alec przedstawił go i związane z nim pliki w Usenecie. Program został dość szybko rozpowszechniony, koniec końców trafił do Boba. Bob po uruchomieniu programu z przerażeniem odkrył iż program "Crack" wykrył jego hasło root. Morał z tej historii jest taki:
+Z ostatnim „nie” jest najwięcej problemów, przekonał się o tym Alec Muffet, autor programu "Crack", który opowiedział kiedyś taką historię: pewien student, przyjaciel Aleca, Bob odbywał podczas przerwy semestralnej praktyki w dużej firmie komputerowej. W weekendy wracał na uczelnię i grał w grę AberMUD (gra sieciowa) na komputerze Aleca. Jednym z obowiązków Boba w firmie, w której odbywał praktykę było zarządzanie systemem komputerowym. Firmie bardzo zależało na bezpieczeństwie swojego systemu, dlatego wszystkie hasła użytkowników były ciągami przypadkowych liter i cyfr nie mających razem żadnego sensu. Pewnego dnia Alec włączył hasła gry "AberMUD" do powstającej wersji słownika programu "Crack". Włączył te hasła dlatego, że były zapisane w jego komputerze w pliku w postaci niezaszyfrowanej. Gdy słownik był już wstępnie skompletowany Alec w celach testowych włączył go w systemie uczelnianym, okazało się, że program trafił na kilka haseł studenckich. Alec kazał swoim studentom zmienić hasła i zapomniał o całej sprawie. Gdy program "Crack" był już gotowy Alec przedstawił go i związane z nim pliki w Usenecie. Program został dość szybko rozpowszechniony, koniec końców trafił do Boba. Bob po uruchomieniu programu z przerażeniem odkrył iż program "Crack" wykrył jego hasło root. Morał z tej historii jest taki:
 
 + nigdy nie używaj haseł do swoich kont w innych aplikacjach
 + hasła powinny być przechowywane w zaszyfrowanej postaci
@@ -73,12 +115,12 @@ Z ostatnim „nie” jest najwięcej problemów, przekonał się o tym Alec Muff
 Systemy z rodziny unix standardowo przechowują dane o kontach użytkowników takie jak: login i hasło w pliku `/etc/passwd`.
 Nie jest to reguła bo np.: w przypadku wielu dystrybucji Linuksa dane o użytkownikach przechowywane są w dwóch plikach tekstowych:
 
-+ `/etc/passwd` - zawiera m.in. login, UID, GID, pole GECOS (z ang. General Electric Comprehensive Operating System - informacje o użytkowniku np. imię i nazwisko),
++ `/etc/passwd` - zawiera m.in. `login`, `UID`, `GID`, pole `GECOS` (z ang. General Electric Comprehensive Operating System - informacje o użytkowniku np. imię i nazwisko),
 + `/etc/shadow` - zawiera m.in. zakodowane hasło, dane o dacie ważności konta i hasła. Są także dystrybucje, które wykorzystują tylko i wyłącznie plik /etc/passwd.
 
 Podobnie sprawa się ma w przypadku systemu FreeBSD:
 
-+ `/etc/passwd` - zawiera m.in. login, UID, GID, pole GECOS (informacje o użytkowniku np. imię i nazwisko),
++ `/etc/passwd` - zawiera m.in. `login`, `UID`, `GID`, pole `GECOS` (informacje o użytkowniku np. imię i nazwisko),
 + `/etc/master.passwd` - zawiera dodatkowo m.in. zakodowane hasło, dane o dacie ważności konta i hasła, dodatkowo system ten posługuje się plikiem `/etc/pwd.db`, który ma za zadanie zwiększać bezpieczeństwo poufnych danych jakimi są hasła a jednocześnie ułatwić zarządzanie tymi danymi (jest to baza danych przebudowywana za każdym razem gdy zmieniane są informacje w plikach passwd i master.passwd).
 
 #### Linux

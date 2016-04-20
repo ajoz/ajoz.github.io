@@ -17,7 +17,7 @@ Identyfikacja ta ma zapewnić ochronę przed nieautoryzowanym dostępem, sprawdz
     - [Kategoria wiedzy](#kategoria-wiedzy)
 - [Hasła](#hasa)
     - [Przyczyny stosowania haseł](#przyczyny-stosowania-hase)
-    - [Postać hasła](#postac-hasa)
+    - [Postać hasła](#posta-hasa)
 - [Formaty plików „z hasłami”](#formaty-plikw-z-hasami)
     - [Linux](#linux)
     - [FreeBSD](#freebsd)
@@ -25,17 +25,17 @@ Identyfikacja ta ma zapewnić ochronę przed nieautoryzowanym dostępem, sprawdz
     - [Zmiana hasła](#zmiana-hasa)
 - [Ataki na systemy haseł](#ataki-na-systemy-hase)
 - [Inne modele identyfikacji](#inne-modele-identyfikacji)
-    - [Identyfikacja „wyzwanie – odpowiedź”](#Identyfikacja-wyzwanie-odpowied)
-    - [Wykorzystanie kluczy publicznych](#Wykorzystanie-kluczy-publicznych)
+    - [Identyfikacja „wyzwanie - odpowiedź”](#identyfikacja-wyzwanie-odpowied)
+    - [Wykorzystanie kluczy publicznych](#wykorzystanie-kluczy-publicznych)
 - [PAM - Wprowadzenie](#pam---wprowadzenie)
     - [PAM - Cele](#pam---cele)
-    - [PAM – Scenariusz wykorzystania](#pam---scenariusz-wykorzystania)
+    - [PAM - Scenariusz wykorzystania](#pam---scenariusz-wykorzystania)
     - [PAM - Moduły](#pam---moduy)
     - [PAM - Konfiguracja systemu](#pam---konfiguracja-systemu)
     - [PAM - /etc/pam.conf](#pam---etcpamconf)
     - [PAM - /etc/pam.d](#pam---etcpamd)
-    - [PAM – Przykładowe wpisy konfiguracyjne](#pam--przykadowe-wpisy-konfiguracyjne)
-    - [PAM - Narzędzia i moduły](#pam---narzdzia-moduy)
+    - [PAM - Przykładowe wpisy konfiguracyjne](#pam---przykadowe-wpisy-konfiguracyjne)
+    - [PAM - Narzędzia i moduły](#pam---narzdzia-i-moduy)
 
 ### Modele identyfikacji
 Identyfikacja bytu jakim może być: `osoba`, `host`, `terminal` inteligentny oraz program, może być rozpatrywana jako weryfikacja tego bytu w 3 kategoriach:
@@ -252,7 +252,7 @@ Relacje między P i V są wysoce asymetryczne. Aby wyeliminować problem przekaz
 
 Identyfikacja na bazie wykorzystania hasła może być bardziej wyrafinowana. Istnieje szereg modeli identyfikacji wykorzystujących silną identyfikację podmiotów. Jedną z takich metod jest identyfikacja “wyzwanie – odpowiedź” (protokół negocjowania – lub często nazywany protokół “uścisku dłoni” - “handshaking protocol”).
 
-#### Identyfikacja „wyzwanie – odpowiedź”
+#### Identyfikacja „wyzwanie - odpowiedź”
 
 Podczas dialogu P i V nie wymieniają między sobą żadnych haseł. Zamiast tego wspólne hasło znane zarówno P i V wykorzystywane jest do generowania poprawnych odpowiedzi na tzw. wyzwania. W tym kontekście “wspólne hasło” pełni rolę klucza kryptograficznego. Protokół ten pozwala P i V upewnić się, że posiadają ten sam zestaw kluczy (haseł).
 

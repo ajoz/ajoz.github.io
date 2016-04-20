@@ -11,31 +11,31 @@ W jaki sposób zapewnić skuteczną ochronę zasobów systemu komputerowego? Mo�
 
 Identyfikacja ta ma zapewnić ochronę przed nieautoryzowanym dostępem, sprawdzić, czy są użytkownicy potrzebujący uzyskać zasoby systemu oraz w jaki sposób chcą je wykorzystać. W idealnej sytuacji jakakolwiek identyfikacja mająca ochraniać dane nie byłaby konieczna. Jednak, gdy administrator musi borykać się z problemami „złośliwych” programów, słabo wyszkolonych użytkowników, włamywaczy szukających cennych danych, jak i tych, którzy chcieliby zniszczyć system, powinien mieć narzędzia i metody pozwalające na kontrolę dostępu do zasobów systemu komputerowego.
 
-- [Modele identyfikacji](#modele-identyfikacji)
-    - [Kategoria bycia](#kategoria-bycia)
-    - [Kategoria posiadania](#kategoria-posiadania)
-    - [Kategoria wiedzy](#kategoria-wiedzy)
-- [Hasła](#hasa)
-    - [Przyczyny stosowania haseł](#przyczyny-stosowania-hase)
-    - [Postać hasła](#posta-hasa)
-- [Formaty plików „z hasłami”](#formaty-plikw-z-hasami)
-    - [Linux](#linux)
-    - [FreeBSD](#freebsd)
-    - [Windows NT](#windows-nt)
-    - [Zmiana hasła](#zmiana-hasa)
-- [Ataki na systemy haseł](#ataki-na-systemy-hase)
-- [Inne modele identyfikacji](#inne-modele-identyfikacji)
-    - [Identyfikacja „wyzwanie - odpowiedź”](#identyfikacja-wyzwanie-odpowied)
-    - [Wykorzystanie kluczy publicznych](#wykorzystanie-kluczy-publicznych)
-- [PAM - Wprowadzenie](#pam---wprowadzenie)
-    - [PAM - Cele](#pam---cele)
-    - [PAM - Scenariusz wykorzystania](#pam---scenariusz-wykorzystania)
-    - [PAM - Moduły](#pam---moduy)
-    - [PAM - Konfiguracja systemu](#pam---konfiguracja-systemu)
-    - [PAM - /etc/pam.conf](#pam---etcpamconf)
-    - [PAM - /etc/pam.d](#pam---etcpamd)
-    - [PAM - Przykładowe wpisy konfiguracyjne](#pam---przykadowe-wpisy-konfiguracyjne)
-    - [PAM - Narzędzia i moduły](#pam---narzdzia-i-moduy)
++ [Modele identyfikacji](#modele-identyfikacji)
+    + [Kategoria bycia](#kategoria-bycia)
+    + [Kategoria posiadania](#kategoria-posiadania)
+    + [Kategoria wiedzy](#kategoria-wiedzy)
++ [Hasła](#hasa)
+    + [Przyczyny stosowania haseł](#przyczyny-stosowania-hase)
+    + [Postać hasła](#posta-hasa)
++ [Formaty plików „z hasłami”](#formaty-plikw-z-hasami)
+    + [Linux](#linux)
+    + [FreeBSD](#freebsd)
+    + [Windows NT](#windows-nt)
+    + [Zmiana hasła](#zmiana-hasa)
++ [Ataki na systemy haseł](#ataki-na-systemy-hase)
++ [Inne modele identyfikacji](#inne-modele-identyfikacji)
+    + [Identyfikacja „wyzwanie - odpowiedź”](#identyfikacja-wyzwanie---odpowied)
+    + [Wykorzystanie kluczy publicznych](#wykorzystanie-kluczy-publicznych)
++ [PAM - Wprowadzenie](#pam---wprowadzenie)
+    + [PAM - Cele](#pam---cele)
+    + [PAM - Scenariusz wykorzystania](#pam---scenariusz-wykorzystania)
+    + [PAM - Moduły](#pam---moduy)
+    + [PAM - Konfiguracja systemu](#pam---konfiguracja-systemu)
+    + [PAM - /etc/pam.conf](#pam---etcpamconf)
+    + [PAM - /etc/pam.d](#pam---etcpamd)
+    + [PAM - Przykładowe wpisy konfiguracyjne](#pam---przykadowe-wpisy-konfiguracyjne)
+    + [PAM - Narzędzia i moduły](#pam---narzdzia-i-moduy)
 
 ### Modele identyfikacji
 Identyfikacja bytu jakim może być: `osoba`, `host`, `terminal` inteligentny oraz program, może być rozpatrywana jako weryfikacja tego bytu w 3 kategoriach:
@@ -50,7 +50,9 @@ Pierwsza kategoria nazywana jest także `user identificaction`. Każdy użytkown
 
 Otóż jak dobrze wiemy odciski palców uznane są za niepowtarzalną `własność`, zatem sąd uznaje je za dowód nie do podważenia. Wymyślono więc urządzenia do identyfikacji linii papilarnych (`AFIM` – automated fingerprint identification machines), jednak maszyny takie są drogie a możliwość ich wykorzystania dość ograniczona.
 
-Na podobnej zasadzie działają wszelkie systemy stwierdzające inne niepowtarzalne cechy jak badanie struktury siatkówki i tęczówki oka. Jednak mimo tego, iż prawdopodobieństwo błędnej akceptacji jest w ich przypadku naprawdę małe, wysoka cena specjalistycznych urządzeń dyskwalifikuje tą metodę do masowych zastosowań . Kolejne nie mniej ciekawe metody identyfikacji to badanie topografii dłoni lub geometrii twarzy. Wspomniane wyżej metody mają ważną zaletę, nie wiążą się z dość nieprzyjemnym zabiegiem jak np.: skanowanie gałki ocznej, ale ich prawdopodobieństwo błędnej identyfikacji jest znacznie większe niż w przypadku badania siatkówki. Systemy sprawdzające geometrie twarzy mogą służyć nie tylko jako medium autoryzujące, lecz mogą pomagać np.: w wyszukiwaniu terrorystów wśród pasażerów na lotnisku. Podpis odręczny jest sam w sobie pewnym zbiorem cech człowieka wynikającym z nawyków takich jak nacisk i kierunek prowadzenia pióra, styl pisma, w tym nachylenie liter, szybkość pisania itp. Podobna do tej metody może być identyfikacja na podstawie rytmu i tempa naciskania klawiszy. Jednak wiąże się to z wyposażeniem klawiatury w dodatkowe czujniki rejestrujące „parametry stukania w klawisze”. Aby ten opis metod identyfikacji był kompletny należy wspomnieć o identyfikacji na podstawie kodu DNA. Teoretycznie prawdopodobieństwo błędu jest tu równe zeru, ale obecnie metodę tę stosować można jedynie w specjalistycznych laboratoriach.
+Na podobnej zasadzie działają wszelkie systemy stwierdzające inne niepowtarzalne cechy jak badanie struktury siatkówki i tęczówki oka. Jednak mimo tego, iż prawdopodobieństwo błędnej akceptacji jest w ich przypadku naprawdę małe, wysoka cena specjalistycznych urządzeń dyskwalifikuje tą metodę do masowych zastosowań .
+
+Kolejne nie mniej ciekawe metody identyfikacji to badanie topografii dłoni lub geometrii twarzy. Wspomniane wyżej metody mają ważną zaletę, nie wiążą się z dość nieprzyjemnym zabiegiem jak np.: skanowanie gałki ocznej, ale ich prawdopodobieństwo błędnej identyfikacji jest znacznie większe niż w przypadku badania siatkówki. Systemy sprawdzające geometrie twarzy mogą służyć nie tylko jako medium autoryzujące, lecz mogą pomagać np.: w wyszukiwaniu terrorystów wśród pasażerów na lotnisku. Podpis odręczny jest sam w sobie pewnym zbiorem cech człowieka wynikającym z nawyków takich jak nacisk i kierunek prowadzenia pióra, styl pisma, w tym nachylenie liter, szybkość pisania itp. Podobna do tej metody może być identyfikacja na podstawie rytmu i tempa naciskania klawiszy. Jednak wiąże się to z wyposażeniem klawiatury w dodatkowe czujniki rejestrujące „parametry stukania w klawisze”. Aby ten opis metod identyfikacji był kompletny należy wspomnieć o identyfikacji na podstawie kodu DNA. Teoretycznie prawdopodobieństwo błędu jest tu równe zeru, ale obecnie metodę tę stosować można jedynie w specjalistycznych laboratoriach.
 
 #### Kategoria posiadania
 
@@ -61,9 +63,11 @@ Wracając do kategorii weryfikacji podmiotu to druga z wymienionych, kategoria p
 Trzecia ostatnia kategoria, kategoria wiedzy bazuje na założeniu, iż pewną sekretną informację zna jedynie uprawniony do tego podmiot. Ewentualne zgubienie takiej informacji skutkuje tym, że podmiot nie może zaświadczyć o swej autentyczności. Żaden ze sposobów identyfikacji nie daje stuprocentowego zabezpieczenia; hasło można podsłuchiwać podłączając się pod odpowiednią linię terminalu; przykładając komuś pistolet do skroni, napastnik może ukraść wspominaną już wcześniej kartę chipową, a co może wydawać się bardzo brutalne, za pomocą noża bandyta może pozbawić użytkownika palców! Ogólnie należy sobie uświadomić, że „im bardziej godna zaufania jest forma identyfikacji, tym bardziej wyrafinowana będzie metoda weryfikacji i tym bardziej agresywne zachowanie może przejawić napastnik”.
 
 ### Hasła
+
 Hasła jest to najbardziej popularna technika weryfikacji użytkownika. Hasło podczas logowania podaje się aby system mógł zweryfikować, czy użytkownik jest tym za kogo się podaje. System sprawdza czy podane przez użytkownika hasło pasuje do żądanego konta. Jakąkolwiek dalszą pracę w systemie, użytkownik może podjąć, jeżeli wszystkie dane się zgadzają. W tej chwili nie ma systemu, który wyświetlałby wprowadzane przez użytkownika hasła. Jest to jedna z form zabezpieczeń przed niepowołanym przejęciem hasła tzw.: „shoulder surfing” (podglądanie przez ramię).
 
 #### Przyczyny stosowania haseł
+
 Po co więc używać haseł? Przecież w przypadku systemów „biurkowych” nie wymaga się stosowania haseł. Utrudniają one niejako pracę użytkownikom korzystającym ze wspólnego sprzętu (w tym także danych dyskowych). W przypadku grup badawczych, które pracowały nad Unixem było podobnie. „Wiele grup badawczych nie używało haseł dla użytkowników indywidualnych – często z tego samego powodu, z jakiego wstydzili się zamków w szufladach swoich biurek i w drzwiach swoich biur. W tych środowiskach zaufanie, szacunek i dobre obyczaje stanowiły silną broń przeciw kradzieżom i destrukcji.” Dzisiaj jesteśmy wstanie sobie wyobrazić co mógłby uczynić napastnik w tak niezabezpieczonym systemie. Hasła są jedną z form ochrony mającą przeciwdziałać (lub niestety tylko utrudniać) kradzieży danych, wyników, nieuczciwej konkurencji jak i niszczeniu danych przez przypadkowych napastników.
 
 #### Postać hasła
@@ -78,7 +82,7 @@ Posiądziemy dzięki temu `52^n` równie prawdopodobnych słów. Prawdopodobień
  „ , . ; : ‘ [ ] { } ( ) * & ^ % $ # @ !
 ```
 
- Istnieje jednak pewne niebezpieczeństwo związane z użyciem tych znaków w haśle, np.: `xdm` odfiltrowuje znaki specjalne (na myśli mam tutaj znaki: ^@, ^G, ^H, ^[ itp.). Powinno się także wystrzegać znaków mogących powodować interakcję z terminalem (np.: ^L), lub znaków: `\`, `#`, `@` które jeszcze w niektórych Unixach traktowane są jako odpowiednio: `escape`, `erase` i `kill`.
+ Istnieje jednak pewne niebezpieczeństwo związane z użyciem tych znaków w haśle, np.: `xdm` odfiltrowuje znaki specjalne (na myśli mam tutaj znaki: `^@`, `^G`, `^H`, `^[` itp.). Powinno się także wystrzegać znaków mogących powodować interakcję z terminalem (np.: `^L`), lub znaków: `\`, `#`, `@` które jeszcze w niektórych Unixach traktowane są jako odpowiednio: `escape`, `erase` i `kill`.
 
 Czego unikać przy wyborze hasła? Przedstawić można oczywistą listę:
 
@@ -146,10 +150,7 @@ andrey:x:561:561:Andrzej Jozwiak:/home/andrey:/bin/bash
 ra88:x:562:561:Konrad Jojczyk:/home/ra88:/bin/bash
 ```
 
-Plik shadow w systemie „Linux” służy „przesłonięciu” informacji znajdujących się w pliku `/etc/passwd`. Co oznacza przesłanianie? Plik `/etc/passwd` jako ogólnie dostępny może być źródłem sekretnych informacji. Intruz mając dostęp (nawet tylko chwilowy) do jednego z kont w systemie, po przechwyceniu pliku passwd, wchodzi w posiadanie nie tylko listy użytkowników systemu (listy potencjalnych ofiar ataku) oraz ich zaszyfrowanych haseł, ale także danych GECOS (niektóre firmy dbają o uzupełnianie tych danych). Mając plik z nazwami użytkowników i ich hasłami może w „zaciszu domowym” przeprowadzić ataki słownikowe na te konta porównując zaszyfrowane postacie odgadywanych haseł z tymi zapisanymi w pliku. Jak wiadomo wielu użytkowników korzysta z prostych haseł, co daje intruzowi większą gamę kont z których może próbować (po odgadnięciu hasła) uzyskać przywileje administratora (root). Zdarza się, że w celu przejęcia hasła włamywacz zadzwoni do pracownika, którego hasło chce poznać, przedstawi się jako administrator i poprosi o jego hasło (tzw. social engineering) Dokładna struktura pliku wygląda następująco (kolejne pola, dotyczące jednego konta)
-
-Plik shadow w systemie „Linux” służy „przesłonięciu” informacji znajdujących się w pliku `/etc/passwd`. Co oznacza przesłanianie?
-Plik `/etc/passwd` jako ogólnie dostępny może być źródłem sekretnych informacji. Intruz mając dostęp (nawet tylko chwilowy) do jednego z kont w systemie, po przechwyceniu pliku passwd, wchodzi w posiadanie nie tylko listy użytkowników systemu (listy potencjalnych ofiar ataku) oraz ich zaszyfrowanych haseł, ale także danych GECOS (niektóre firmy dbają o uzupełnianie tych danych). Mając plik z nazwami użytkowników i ich hasłami może w „zaciszu domowym” przeprowadzić ataki słownikowe na te konta porównując zaszyfrowane postacie odgadywanych haseł z tymi zapisanymi w pliku. Jak wiadomo wielu użytkowników korzysta z prostych haseł, co daje intruzowi większą gamę kont z których może próbować (po odgadnięciu hasła) uzyskać przywileje administratora (root). Zdarza się, że w celu przejęcia hasła włamywacz zadzwoni do pracownika, którego hasło chce poznać, przedstawi się jako administrator i poprosi o jego hasło (tzw. social engineering) Dokładna struktura pliku wygląda następująco (kolejne pola, dotyczące jednego konta):
+Plik `shadow` w systemie „Linux” służy „przesłonięciu” informacji znajdujących się w pliku `/etc/passwd`. Co oznacza przesłanianie? Plik `/etc/passwd` jako ogólnie dostępny może być źródłem sekretnych informacji. Intruz mając dostęp (nawet tylko chwilowy) do jednego z kont w systemie, po przechwyceniu pliku `passwd`, wchodzi w posiadanie nie tylko listy użytkowników systemu (listy potencjalnych ofiar ataku) oraz ich zaszyfrowanych haseł, ale także danych `GECOS` (niektóre firmy dbają o uzupełnianie tych danych). Mając plik z nazwami użytkowników i ich hasłami może w „zaciszu domowym” przeprowadzić ataki słownikowe na te konta porównując zaszyfrowane postacie odgadywanych haseł z tymi zapisanymi w pliku. Jak wiadomo wielu użytkowników korzysta z prostych haseł, co daje intruzowi większą gamę kont z których może próbować (po odgadnięciu hasła) uzyskać przywileje administratora (root). Zdarza się, że w celu przejęcia hasła włamywacz zadzwoni do pracownika, którego hasło chce poznać, przedstawi się jako administrator i poprosi o jego hasło (tzw. social engineering) Dokładna struktura pliku wygląda następująco (kolejne pola, dotyczące jednego konta):
 
 + Login – nazwa, za pomocą której użytkownik się loguje
 + Zaszyfrowane hasło – więcej o interpretacji łańcucha można przeczytać na stronie manuala (crypt (3))
@@ -315,7 +316,7 @@ Podczas projektowania wykluczono następujące zastosowania systemu PAM:
 + PAM nie zajmuje się problemem przesyłania nie zakodowanych danych przez sieć (np. przesyłanie nie zakodowanego hasła przez klienta protokołu FTP);
 + PAM nie zajmuje się spójnością danych trzymanych w różnych miejscach (np. jeśli hasła trzymane w dwóch bazach danych były identyczne, to PAM nie zapewni automatycznej ich synchronizacji to zależy od konkretnego modułu).
 
-#### PAM – Scenariusz wykorzystania
+#### PAM - Scenariusz wykorzystania
 
 Poniżej przedstawiony jest przykładowy scenariusz wykorzystania systemu PAM:
 
@@ -396,7 +397,7 @@ Oznaczają one działanie, jakie biblioteka ma podjąć po otrzymaniu kodu o pod
 
 Stosowanie plików konfiguracyjnych w katalogu /etc/pam.d ma różne zalety, takie jak łatwiejsza rekonfiguracja, możliwość używania dowiązań symbolicznych dla tych samych metod autentykacji oraz ułatwione zarządzanie pakietami (każdy pakiet DEB, lub RPM może dodawać własny plik z metodą autentykacji).
 
-#### PAM – Przykładowe wpisy konfiguracyjne
+#### PAM - Przykładowe wpisy konfiguracyjne
 
 Poniżej przedstawione są przykładowe wpisy konfiguracyjne. Jeżeli system ma być uważany za zabezpieczony, musi mieć dobrze sformułowane wpisy ‘other’, dotyczące innych niewyszczegółowionych w plikach konfiguracyjnych aplikacji. Przedstawione poniżej wpisy można nazwać dość paranoicznymi ustawieniami ale jest to dość dobry start na sam początek konfiguracji systemu.:
 

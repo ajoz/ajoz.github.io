@@ -7,33 +7,35 @@ tags: freebsd unix security shell
 disqus: true
 ---
 
-W jaki sposób zapewnić skuteczną ochronę zasobów systemu komputerowego? Można ów system ogrodzić, oddzielić od „sieci” i postawić przy nim wartownika. Jednak rozwiązaniem mniej kosztownym niż strażnik, który udostępnia każdemu użytkownikowi systemu terminal dostępowy, jest ścisła i „niezawodna” identyfikacja. Identyfikacja ta ma zapewnić ochronę przed nieautoryzowanym dostępem, sprawdzić, czy są użytkownicy potrzebujący uzyskać zasoby systemu oraz w jaki sposób chcą je wykorzystać. W idealnej sytuacji jakakolwiek identyfikacja mająca ochraniać dane nie byłaby konieczna. Jednak, gdy administrator musi borykać się z problemami „złośliwych” programów, słabo wyszkolonych użytkowników, włamywaczy szukających cennych danych, jak i tych, którzy chcieliby zniszczyć system, powinien mieć narzędzia i metody pozwalające na kontrolę dostępu do zasobów systemu komputerowego.
+W jaki sposób zapewnić skuteczną ochronę zasobów systemu komputerowego? Można ów system ogrodzić, oddzielić od „sieci” i postawić przy nim wartownika. Jednak rozwiązaniem mniej kosztownym niż strażnik, który udostępnia każdemu użytkownikowi systemu terminal dostępowy, jest ścisła i „niezawodna” identyfikacja.
 
-- [Modele identyfikacji](#)
-    - [Kategoria bycia](#)
-    - [Kategoria posiadania](#)
-    - [Kategoria wiedzy](#)
-- [Hasła](#)
-    - [Przyczyny stosowania haseł](#)
-    - [Postać hasła](#)
-- [Formaty plików „z hasłami”](#)
-    - [Linux](#)
-    - [FreeBSD](#)
-    - [Windows NT](#)
-    - [Zmiana hasła](#)
-- [Ataki na systemy haseł](#)
-- [Inne modele identyfikacji](#)
-    - [Identyfikacja „wyzwanie – odpowiedź”](#)
-    - [Wykorzystanie kluczy publicznych](#)
-- [PAM - Wprowadzenie](#)
-    - [PAM - Cele](#)
-    - [PAM – Scenariusz wykorzystania](#)
-    - [PAM - Moduły](#)
-    - [PAM - Konfiguracja systemu](#)
-    - [PAM - /etc/pam.conf](#)
-    - [PAM - /etc/pam.d](#)
-    - [PAM – Przykładowe wpisy konfiguracyjne](#)
-    - [PAM - Narzędzia i moduły](#)
+Identyfikacja ta ma zapewnić ochronę przed nieautoryzowanym dostępem, sprawdzić, czy są użytkownicy potrzebujący uzyskać zasoby systemu oraz w jaki sposób chcą je wykorzystać. W idealnej sytuacji jakakolwiek identyfikacja mająca ochraniać dane nie byłaby konieczna. Jednak, gdy administrator musi borykać się z problemami „złośliwych” programów, słabo wyszkolonych użytkowników, włamywaczy szukających cennych danych, jak i tych, którzy chcieliby zniszczyć system, powinien mieć narzędzia i metody pozwalające na kontrolę dostępu do zasobów systemu komputerowego.
+
+- [Modele identyfikacji](#modele-identyfikacji)
+    - [Kategoria bycia](#kategoria-bycia)
+    - [Kategoria posiadania](#kategoria-posiadania)
+    - [Kategoria wiedzy](#kategoria-wiedzy)
+- [Hasła](#hasla)
+    - [Przyczyny stosowania haseł](#przyczyny-stosowania-hasel)
+    - [Postać hasła](#postac-hasla)
+- [Formaty plików „z hasłami”](#formaty-plikow-z-haslami)
+    - [Linux](#linux)
+    - [FreeBSD](#freebsd)
+    - [Windows NT](#windowsnt)
+    - [Zmiana hasła](#zmiana-hasla)
+- [Ataki na systemy haseł](#ataki)
+- [Inne modele identyfikacji](#inne-modele)
+    - [Identyfikacja „wyzwanie – odpowiedź”](#wyzwanie-odpowiedz)
+    - [Wykorzystanie kluczy publicznych](#klucze-publiczne)
+- [PAM - Wprowadzenie](#pam-wprowadzenie)
+    - [PAM - Cele](#pam-cele)
+    - [PAM – Scenariusz wykorzystania](#pam-wykorzystanie)
+    - [PAM - Moduły](#pam-moduly)
+    - [PAM - Konfiguracja systemu](#pam-konfiguracja)
+    - [PAM - /etc/pam.conf](#pam-plik-konfiguracyjny)
+    - [PAM - /etc/pam.d](#pam-demon)
+    - [PAM – Przykładowe wpisy konfiguracyjne](#pam-przyklady)
+    - [PAM - Narzędzia i moduły](#pam-narzedzia-moduly)
 
 ### Modele identyfikacji
 Identyfikacja bytu jakim może być: `osoba`, `host`, `terminal` inteligentny oraz program, może być rozpatrywana jako weryfikacja tego bytu w 3 kategoriach:

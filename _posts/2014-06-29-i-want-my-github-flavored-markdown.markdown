@@ -24,7 +24,7 @@ You can imagine that I wanted that and I also wanted to have a `table of content
 
 Jekyll supports several markdown "*interpreters*", I've tried those:
 
-- [kramdown](kramdown.gettalong.org/)
+- [kramdown](http://kramdown.gettalong.org/)
 - [redcarpet](https://github.com/vmg/redcarpet)
 - [rdiscount](https://github.com/davidfstr/rdiscount)
 
@@ -68,7 +68,7 @@ There were few problems:
 
 - fenced code blocks were not working
 - syntax highlighting was not working when applied with fenced code blocks
-- no footnotes: `[^1]` although promised on the project site 
+- no footnotes: `[^1]` although promised on the project site
 
 At least table of contents worked but not without some trouble. Although I added `generate_toc` on the extensions list it didn't appear with the keyword `[TOC]` that github was using. It seems you need to explicitly specify the keyword with the `toc_token` and believe me it was hard to find.
 

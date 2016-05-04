@@ -400,10 +400,10 @@ hr {
 
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-size: .8rem; }
+  font-size: .9rem; }
 
 p code {
-  padding: 0px 5px;
+  padding: 1px 5px;
   border: 1px solid #ddd;
   background-color: #f8f8f8;
   border-radius: 3px;
@@ -459,7 +459,13 @@ footer {
   border-radius: 6px;
   background-color: #272822;
   color: #f8f8f2;
-  line-height: 1; }
+  line-height: 1;
+  white-space: pre-wrap;       /* CSS 3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
   .highlight code {
     font-size: .7rem; }
 

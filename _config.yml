@@ -1,12 +1,7 @@
-# encoding: utf-8
-# Site settings
-title: Andrzej Jóźwiak - Blog
-author: Andrzej Jóźwiak
-description: My blog about software design, programming and all this stuff...
-baseurl:
-url: http://ajoz.github.io
-
-customsearch: 009777578059784488631:8kibs8jmyma
+# General Jekyll Config
+url: http://example.com
+lsi: false
+exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 
 # Build settings
 markdown: kramdown
@@ -21,10 +16,3 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
-sass:
-  sass_dir: public/css
-  style: :compressed
-
-gems:
-  - jekyll-sitemap

@@ -1,0 +1,222 @@
+---
+layout: post
+date: 31-07-2014
+author: Andrzej Jóźwiak
+title: Android Indie Game Development
+tags: android gamedev games
+disqus: true
+---
+
+So you want to create games, games for Android in fact. The reason behind your idea is irrelevant, maybe you like existing games, you have an incredible idea you need to show to the world or you just want to try yourself. You need a pinch of creativity and a bit of zeal and luck. If working for a mega corporation is not for you and you want to have influence on the end product, then maybe Indie game dev is for you. Let's explore!
+
+What hides the name "indie"? The term comes from the word "independent", indie games are mostly written by single people or small teams without any financial support from a publisher. Such independence allows more creativity, as a designer you can commit to greater risks and there is no board of directors who need to accept every change.
+
+Due to limited resources such games often emphasize innovative game mechanics, unusual story or different forms of presentation. Even though the founding is limited it doesn't mean that indie games are not successful. Recent years gave us such hits like: Minecraft, World of Goo, Braid. They earned a lot thanks to services like: Steam or Google Play. I can safely say that the evolution of online game stores allowed indie game dev to rise.
+
+I think that Minecraft is the best example of an indie game success, there are PC, XBox, Android versions, even for Raspberry Pi. When I last read about this game it had almost 10 milion copies sold.
+
+I want to gather some tips how to create a game and not get insane in the process especially if we are working on it in our spare / free time after our day job or on the weekends. From my own experience I know it takes a lot more work then we originally planned / estimated but the results are really satisfying.
+
+## Monetization - how to sell our game?
+
+Most designers will tell you that only an interesting idea counts, but not all ideas will fit a mobile device. You have many obstacles: small screen, not physical keyboard, issues with reading accuracy of the user input also sometimes issues with permanent connection to the Internet. Not all created games will be a success on mobile, good example are First Person Shooters. They need complicated control systems: camera, movement, shooting, jumping, browsing equipment which can be at best wonky on a touch device. Its quite frustrating when you obscure the view you need with your own fingers when your trying to interact with the game. Such games often have on-screen controls but still they are not as responsive as a normal controller would be. You could always assume that players will use bluetooth controllers with your game, this however will limit the market your game can be sold at. We are facing now the first problem: how to design our game that it will sell? I want to note here that you do not have limit yourself with the ways of monetization but its good to know how they work and how they affect gameplay.
+
+Monetization is a term that is spreading with a speed of a lightning. It describes ways of earning profit on a given product (it doesn't necessary need to be a game). On the Android platform, there are available:
+
+1. *sell* - for example on Google Play, Amazon Appstore or GetJar. Depending on the contract with the shop you will get percentage from the sold game. They are giving you the platform, this is why you give them some compensation.
+2. *ads* - in different forms: as banners inside the app, as notification bar adds, as popup windows. There are many solutions for example Google AdMob or MobClix. They will pay you either for each displayed advert or for each clicked.
+3. *iap* - in app purchase - its a good way to sell all available additional content you have for your game: maps, skins, models. On Android we have different solutions: Google In-App-Purchase. Recently Amazon released their own API for integrated purchase.
+4. *virtual currency* - its a modified IAP solution, instead of selling particular map or skin, developer is selling in game currency, which can be used to get additional content inside the game. Most often players have possibility to acquire the currency just by playing the game, but it takes more time.
+5. *mixed* - its a combination of all the above solutions. For example Tapjoy is a solution that is using a virtual currency, players can get it by clicking displayed ads or by installing other apps in the Tapjoy network. Another very interesting solution is AddOverlay from LeadBolt which combines unlocking content with clicking ads. Player needs to click an advert to unlock content.
+
+There are many places you can sell your game in (there are around 30 different Android app markets):
+
+1. *Google Play* - https://play.google.com/ - Its the default app market for the majority of devices. Many people are used to browse the contents of this market in search of something new and exciting. If you do not have any previous experience with selling apps on Android, it is advised to start with this one first.
+2. *Amazon Appstore* - http://www.amazon.com/ - Well known alternative for Google Play, by default install on Amazon Kindle Fire. Unfortunately its availability is limited to USA. Each day one paid app is free of charge for one day.
+3. *GetJar* - http://getjar.com/ - Its marketed as a second largest app market in the world. It might be true due to the fact its available also on platforms other then Android. Most commonly installed on devices which do not have access to official Google Play market. Angry Birds from Rovio was first on GetJar before it came to Google Play.
+4. *SlideME* - http://slideme.org/ - Its marketed as a "better" alternative to Google Play, it takes a lower share for selling the app. It allows to get the app through a web browser or an app on the device.
+
+
+
+
+Pozostaje odpowiedzieć na pytanie, jaki model powinniśmy wykorzystać. Jeżeli ukończyliśmy już naszą grę i mamy szansę na dobrą reklamę, możemy pokusić się o próbę sprzedaży na jednym lub kilku z dostępnych marketów. Najczęściej stosowanym podejściem jest tworzenie dwóch wersji: bezpłatnej demonstracyjnej z mniejszą liczbą poziomów lub w inny sposób ograniczonej oraz płatnej posiadającej wszystko, co chcemy zaoferować graczom. Często jest to także wersja HD z lepszą jakością grafik czy dźwięków. Wersja demonstracyjna oraz płatna to dobry pomysł, jeżeli nie mamy możliwości zintegrowania innych form monetyzacji. Czasami interfejs naszej gry nie będzie pozwalać na dogodne umieszczenie banerów z reklamami, albo nie będziemy posiadać tyle dodatkowych treści, które nadawałyby się do sprzedawania we wbudowanym sklepie. Jedyną opcją jaka nam wtedy pozostaje jest właśnie sprzedaż. Często twórcy ustalają cenę wyższą niż docelowa, dając sobie możliwość ogłaszania promocji poprzez zmniejszenie ceny. Z jednej strony jest to dość nieuczciwa praktyka niemniej może zachęcić do kupna wielu niezdecydowanych.
+
+Wspomniane już reklamy wymagają od nas poświęcenia miejsca na ekranie. Z jednej strony oznacza to, że albo odpowiednio dostosujemy swój interfejs wcześniej albo pozwolimy by reklama przesłoniła go częściowo. Częściowe zasłonięcie interfejsu może oznaczać, że gracze będą przypadkowo klikać w reklamy, tym samym generując dla nas zysk. Jednak trzeba liczyć się z tym, że zostanie to zauważone przez użytkowników i bezlitośnie wytknięte w komentarzach, co skutkować może zmniejszeniem się ilości pobrań.
+
+Pamiętacie, jak irytujące były reklamy w pierwszej wersji gry Angry Birds na urządzeniu o małym ekranie? Wielokrotnie chcąc kliknąć lecącego ptaka klikało się w reklamę, co zraziło  do gry wiele osób. Należy też pamiętać o odpowiedniej ilości wyświetlanych reklam. Jeżeli na każdej planszy, na każdym menu użytkownika widać będzie baner, zniechęcenie graczy jest więcej niż prawdopodobne. Jeżeli mamy już pewną artystyczną wizję związaną z samą grą, baner reklamowy może kompletnie zniszczyć wrażenia z niej czerpane.
+
+Rys. Eufloria raczy gracza delikatnymi pastelowymi kolorami, jest bardzo stonowana, bez zbędnych elementów dekoracyjnych. Dodanie banera reklamowego mogłoby całkowicie popsuć jej stylistykę. Trzeba pamiętać, że jako twórca nie mamy wpływu na wyświetlane reklamy, ich kolorystykę i treść.
+
+Wraz z reklamami, pojawiły się dodatkowe akronimy mówiące o tym, za co twórcy będą zarabiać. Aktualnie najczęściej spotykane są CPC oraz CPM. Jakie mają znaczenie dla twórcy?
+CPC - Cost Per Click - (z ang. koszt za kliknięcie) pieniądze otrzymamy wyłącznie w przypadku, w którym gracz kliknie wyświetlaną przez nas reklamę.
+
+CPM - Cost Per Mille - (z ang. koszt za tysiąc wyświetleń), znajdująca się w akronimie litera ‘M’ pochodzi od rzymskiej cyfry oznaczającej tysiąc. Dostawca reklam zapłaci nam za każde tysiąc wyświetleń jego reklam w naszej aplikacji.
+
+AdMob firmy Google opiera się na zasadzie działania CPC. Jednakże jednoznaczne określenie kosztu kliknięcia w AdMob jest trudne, ponieważ zależy od wielu czynników takich jak: rodzaj aplikacji, docelowa grupa odbiorców itp. Koszt kształtują też reklamodawcy współpracujący z Google. Aby móc lepiej przekonać się, jakie pieniądze będą generować reklamy w AdMob, najlepszym sposobem będzie integracja tego rozwiązania na kilka tygodni i w ten sposób analiza potencjału naszej aplikacji.
+
+Jeżeli nie chcemy niszczyć naszej artystycznej wizji pstrokatymi reklamami, do dyspozycji pozostają nam inne formy monetyzacji. Notyfikacje typu push pojawiające się na obszarze powiadomień urządzenia mogą zawierać reklamy. Wydają się wręcz idealnym rozwiązaniem ponieważ nie jesteśmy zmuszeni ingerować w nasz interfejs. Jednakże zyskały one złą sławę wśród użytkowników, głównie z powodu ich nadmiernej ilości oraz pojawiania się w losowych momentach. Prekursorem w dziedzinie takiej reklamy była firma AirPush, udostępniająca odpowiednie API dla twórców. Ta sama firma, chcąc zachęcić twórców, podaje dane, według których użytkownicy ściągają obecnie około 800 tysięcy aplikacji dziennie, wyświetlających właśnie reklamy typu push.
+
+Krytycy tego typu marketingu twierdzą, że jest mylący dla konsumentów. Ta postać reklamy jest nieznana wielu użytkownikom, którzy nie wiedzą, skąd się ona pojawiaja na ich urządzeniach. Na listach problemów dotykających użytkowników zaraz po malware znajdują się właśnie notyfikacje z reklamami. Wśród autorów gier zdania są podzielone. Znane są historie usuwania aplikacji z marketu przez Google po licznych raportach użytkowników, co spotkało znaną aplikację APNDroid. Inni twierdzą, że po wprowadzeniu takich reklam spadała ilość pobrań ich gry. Firmy tworzące takie rozwiązania nie widzą problemu i proponują twórcom umieszczanie ostrzeżeń w opisie aplikacji, aby użytkownik nie był zdziwiony pojawiającymi się znienacka notyfikacjami. Jeżeli zdecydujemy się na to rozwiązanie, najlepiej będzie, jeśli zastosujemy je już od pierwszej wersji naszej gry. W innym przypadku użytkownicy mogą być niemile zdziwieni po aktualizacji, co może nam mocno obniżyć notowania na markecie. Ostatnim słowem ostrzeżenia niech będzie przypomnienie, że powstało kilka regularnie uaktualnianych aplikacji służących do blokowania notyfikacji z reklamami, a sam Android 4.2 pozwala na wybranie, które aplikacje będą pokazywać notyfikacje, a które nie.
+
+Stare powiedzenie mówi, że w życiu najlepsze rzeczy są za darmo, ale z drugiej strony – za wszystko trzeba płacić. Czy na pewno? Przeglądając ranking najbardziej popularnych gier marketu Google Play zauważymy, że pójście ścieżką darmowej aplikacji to najlepszy sposób, aby zarabiać pieniądze. Obecnie istnieje wiele nazw tego modelu monetyzacji: microtransactions, free-to-play, freemium. Aplikacje zarabiają dzięki wbudowanych w nie sklepach lub/i wirtualnej walucie. Wraz z systemem powstało kilka praktyk, jedne spotykają się z krytyką inne zaś mają bardzo dobre opinie.
+
+
+Rys. Bardzo popularna gra Vector firmy Nekki wykorzystuje mikro transakcje w celu generowania dochodu. Wirtualna waluta kupowana jest za pieniądze, możliwe jest jej zdobycie także zwyczajnie poprzez grę.
+
+Pay-to-win (z ang. płać za wygraną) to termin, który powstał całkiem niedawno. Określa wszystkie gry zawierające mikro transakcje pozwalające na łatwiejsze pokonywanie przeciwników lub innych graczy. W grach, w których najlepszy wynik jest ostatecznym celem rozgrywki, pojawia się możliwość kupowania za pieniądze dodatków polepszających zdobywanie punktów. Podejście takie spotyka się często z dużą krytyką, jednakże nie oznacza klęski na rynku. Dobrze znana gra World of Tanks firmy Wargaming.net zawiera opcje kupowania złotych kul, które zadają większe obrażenia innym graczom, a mimo to odniosła ona ogromny komercyjny sukces.
+
+Sprzedawanie wygody lub kosmetycznych dodatków jest najlepiej ocenianą przez graczy formą monetyzacji. Co oznacza wygoda w kontekście gry? Głównie chodzi o czas, po jakim pewne elementy w grze dostępne są dla graczy. Powiedzmy, że stworzyliśmy dwuwymiarową platformówkę, gdzie dwie drużyny graczy walczą przeciwko sobie. Gra zawiera wiele rodzajów uzbrojenia dostępnych po odpowiedniej ilości rozegranych pojedynków lub za opłatą. Oznacza to, że gracz ma do wyboru: poświęcenie czasu na grę lub zakup broni  która mu się podoba i natychmiastowe rozpoczęcie zabawy. Najważniejsze jest to, aby ilość czasu, jaki musi poświęcić gracz, który nie chce płacić, była odpowiednio dobrana. Zbyt duża prawdopodobnie odstraszy ludzi, zbyt mała – nie zagwarantuje nam zysków. Po co nam gracze, którzy nie płacą? Jest to pewna forma autoreklamy, a w dzisiejszych czasach pozytywne komentarze na portalach społecznościowych lub markecie z aplikacjami, pomogą nam dotrzeć do kolejnych użytkowników, co ostatecznie może prowadzić do zwiększania dochodów.
+
+Przede wszystkim należy zrozumieć, że taka forma monetyzacji jest najtrudniejszą ze wszystkich opisanych powyżej. Odpowiednio należy zaprojektować całą grę, ponieważ interfejs użytkownika musi być przystosowany do mikro transakcji jednocześnie nie narzucając się w trakcie zabawy. Gracz musi czuć, że jest szanowany, więc i ceny powinny być bardzo dobrze przemyślane. Często lepiej jest przygotować wiele małych pakietów zawierających dodatkowe elementy o małych cenach, niż kilka dużych paczek przekraczających cenę kilkunastu dolarów / euro / złotych. Najważniejsze jest samo techniczne przygotowanie się do przedsięwzięcia, odpowiednie użycie dostępnych API i przetestowanie mechanizmu. W przypadku problemów z transakcjami, zwroty kosztów mogą być koszmarem i spędzać sen z powiek.
+
+Na samym początku przygody z monetyzacją najlepszym rozwiązaniem mogą być banery reklamowe osadzone w aplikacji. Pozwalają powoli oswoić się z samym rynkiem, jak i wszystkimi formalnościami związanymi z otrzymywaniem pieniędzy od dostawców reklam.
+
+Podtrzymywanie zainteresowania grą
+
+Warunkiem zyskowności gry jest umiejętne podtrzymywanie zainteresowania nią. Zasadniczym sposobem jest regularne uaktualnianie treści, jednakże nic tak nie pomaga w utrzymaniu żywotności gry jak współzawodnictwo lub progresywnie zwiększająca się trudność. Współzawodnictwo nie koniecznie oznacza gry multiplayer – tabele wyników i tabele osiągnięć stanowią pewną jego formę. Gracze mogą wielokrotnie podchodzić do próby bicia danego rekordu lub zdobycia określonego osiągnięcia. W trakcie projektowania należy ustalić, co będzie wyświetlane w rankingu. A może zdecydujemy się na wiele rodzajów rankingów? Największa liczba zabitych wrogów, najszybciej pokonana plansza, najmniejsza ilość porażek na danej mapie; możliwości jest wiele i zależą od specyfiki rozgrywki.
+
+Ostatnio bardzo popularny stał się star rating, czyli wskaźnik wykorzystujący grafikę gwiazdek. Gwiazdki mają informować “jak dobrze” udało się pokonać dany poziom, mapę czy przeciwnika. Ilość zdobytych gwiazdek pozwala odblokowywać dodatkowe treści oraz podwyższać pozycję w rankingu. System osiągnięć jest znacznie bardziej skomplikowanym mechanizmem niż to, co znamy pod postacią prostych gwiazdek. Doskonale znane z gier Masive Multiplayer Online (typ gry rozgrywanej przez wielu graczy jednocześnie) osiągnięcia to skomplikowana forma wyzwań dla gracza. Zaczynają się od prostych działań, takich jak zdobycie określonego poziomu w grze czy pokonanie pewnej liczby przeciwników. Kolejnym etapem są  akcje trudne i pracochłonne, jak zdobycie określonego przedmiotu, - często przy pomocy innych graczy. Naturalnym efektem wprowadzenia osiągnięć będzie rywalizacja graczy między sobą. Umożliwić to może wiele istniejących rozwiązań takich jak Swarm czy HeyZap. Łatwo się domyślić, że powracający zmotywowani gracze będą częściej oglądali wyświetlane przez nas banery lub kupowali w naszym wbudowanym sklepie, co może zwiększyć założony przychód.
+
+Swarm
+http://swarmconnect.com/
+Rankingi wyników
+Tabele osiągnięć
+In-App-Purchase
+Social Gaming
+Przechowywanie danych w chmurze
+Analiza danych
+Wszystkie usługi są całkowicie darmowe, nie ma miesięcznych opłat ani żadnej innej formy subskrypcji. W przypadku wykorzystania wbudowanego IAP, Swarm pobiera prowizje od każdego zakupu.
+Scoreloop
+http://www.scoreloop.com/
+Rankingi wyników
+Tabele osiągnięć
+In-App-Purchase
+Social Gaming
+Wyzwania
+Wyniki w chmurze
+Notyfikacje Push
+Wirtualna waluta
+Cross promotion
+Analiza danych
+Wszystkie usługi są całkowicie darmowe, nie ma miesięcznych opłat ani żadnej innej formy subskrypcji. W przypadku wykorzystania IAP, kupowania wirtualnej waluty, Scoreloop pobiera prowizje od każdego zakupu.
+Scoreninja
+http://scoreninja.appspot.com/
+Rankingi wyników
+Brak opłat, brak gwarancji stabilności i działania usługi.
+Scoreoid
+http://www.scoreoid.net/
+Rankingi wyników
+Tabele osiągnięć
+Zarządzanie aktywnymi graczami
+System notyfikacji
+Geolokacja
+Wyświetlanie treści w zależności od platformy
+Analiza danych
+Aktualnie usługa jest w fazie beta i jest darmowa. Na usługę nałożone są pewne ograniczenia jak np.: quota na składowane dane, po przekroczeniu której należy skontaktować się ze wsparciem technicznym Scoreoid. W przyszłości przewidzianych jest kilka planów płatności.
+HeyZap
+http://developers.heyzap.com/
+Rankingi wyników
+Wyzwania
+Tabele osiągnięć
+Integracja z portalami społecznościowymi
+Reklamy
+SDK oraz wszystkie usługi są darmowe. HeyZap zarabia na reklamach i wypłaca prowizje za wyświetlone reklamy.
+Geosophic
+http://www.geosophic.com
+Rankingi wyników powiązane z geolokacją.
+Darmowa do 20 tysięcy zapytań dziennie. W przypadku przekroczenia limitu niezbędny jest indywidualny kontakt z Geosophic.
+Skiller
+http://www.skiller-games.com/
+Wsparcie dla multiplayer
+System turniejowy
+Wyzwania
+Wyniki w chmurze
+Rankingi wyników
+Tabele osiągnięć (osobne dla każdej z gier oraz dla współzawodnictwa z przyjaciółmi)
+Listy znajomych
+In-App-Purchase
+Wirtualna waluta
+Reklamy
+SDK oraz wszystkie usługi są darmowe. Bardzo trudno odnaleźć informacje o ewentualnych prowizjach w przypadku reklam, IAP oraz wirtualnej waluty.
+Tabela: Jeżeli chcemy wzbogacić naszą grę w tabele wyników, rankingi lub system osiągnięć, nie musimy pisać ich od zera.
+
+Jak zbierać dane, by ulepszyć grę?
+
+Same statystyki pobrań nie stanowią wystarczającej informacji o tym, czy nasza gra podoba się użytkownikom. Informacje o tym, jak długo przeciętny gracz bawi się naszym dziełem, jak daleko udaje mu się przejść, jakie ekrany odwiedza najczęściej, których elementów interfejsu używa, to tylko przykład danych, dzięki którym możemy analizować zachowania użytkowników. Ma to kolosalne znaczenie, jeżeli korzystamy z jednego z przedstawionych wcześniej sposobów monetyzacji. Analiza korzystania z naszej aplikacji pozwala odpowiednio rozlokować banery reklamowe i umiejscowić odniesienia do wbudowanego sklepu. Możliwe, że ekran, który wyświetla reklamy jest w ogóle przez graczy nieoglądany! Obecnie na rynku jest wiele rozwiązań pozwalających na zbieranie anonimowych danych o użytkowaniu. Najbardziej popularny, Google Analytics, znany przede wszystkim z możliwości analizowania ruchu na stronach www, zagościł też na platformie mobilnej Android. Konkurencję dla niego stanowią moduły odpowiedzialne za zbieranie danych wbudowane we frameworki stosowane do implementacji rankingów. Przykładem może być Swarm lub Scoreloop. Bardzo popularny ostatnio stał się Flurry, stosowany w takich grach jak Angry Birds. Duże firmy jak EA, SEGA czy Zynga także stosują to rozwiązanie.
+
+
+Rys. W grze Splendor of Giza wykorzystanie Flurry pozwala stwierdzić, jak użytkownicy nawigują w aplikacji i które ekrany otwierają najczęściej.
+
+
+Rys. Flurry pozwala na rozbudowaną kontrolę wykorzystania naszej aplikacji. Informuje o częstotliwości wykorzystania, długości sesji oraz ilości nowych i powracających użytkowników. Wszystko prezentowane jest za pomocą interfejsu webowego.
+
+Inspiracja i jej prawne aspekty
+
+Co robić, kiedy brakuje pomysłów na tematykę gry lub jej mechanikę? Z pomocą przychodzi Internet, gdzie można znaleźć strony skupiające twórców wymieniających się pomysłami. Wiele rzeczy, które nam wydawały się genialne, może faktycznie spotkać się ze sporą krytyką. Istnieją też strony zawierające całe listy wymyślonych już mechanik i prototypów gier, które możemy wykorzystać jak np. Three Hundred Mechanics.
+
+http://www.gamedesignideas.com/
+Ciekawie prowadzony blog. Autorzy omawiają w nim różne aspekty projektowania gier. Omawiane są pomysły na scenariusze, poziomy oraz mechaniki. Artykuły zawierają opisy i oceny istniejących już gier i zawartych w nich pomysłów.
+http://www.squidi.net/three/index.php
+Próba udokumentowania 300 pomysłów na różne mechaniki dla gier komputerowych. Według pierwotnego planu, na stronie miał być codziennie przedstawiany nowy pomysł przez 300 dni. Obecnie prace kontynuowane są w znacznie wolniejszym tempie. Zbiór jest bardzo ciekawy, albowiem do niektórych pomysłów stworzone zostały proste prototypy za pomocą HTML oraz javascript.
+http://gmc.yoyogames.com/
+Forum dyskusyjne społeczności skupionej wokół narzędzia Game Maker: Studio firmy yoyogames. Na forum dyskutuje wielu pasjonatów, którzy chętnie wymieniają się pomysłami i opiniami. Można uzyskać porady dotyczace naszych własnych pomysłów, jak i przyjrzeć się temu, co planują inni twórcy.
+http://www.streamingcolour.com/blog/game-idea-generator/
+Prosty generator pomysłów, propozycje tworzone są z trzech zbiorów kategorii. Niektóre dość niedorzeczne np. historical, sad, dark, FPS combined with puzzle game, set in a factory.
+http://orteil.dashnet.org/gamegen
+Generator pomysłów pozwalający na tworzenie wielu propozycji i przechowywanie ich w schowku. Posiada dodatkową opcję eliminującą kompletnie niedorzeczne sugestie.
+
+
+Tabela: W przypadku braku pomysłów, można skorzystać z pomocy w Internecie. Fora dyskusyjne, grupy, tematyczne blogi pomogą nam przełamać blokadę twórczą.
+
+Propozycje tworzone przez generatory pomysłów mogą wydać się niedorzeczne, często okazują się jednak być dobrym początkiem. Dla przykładu, generator wylosował dla mnie: szczęśliwa krwawa gra dla dzieci dziejąca się na innej planecie. Na pierwszy rzut oka nic nie da się z tym zrobić, ale propozycje można podrasować, np.: Baba Jaga wysyła dzieci na inną planetę, gdzie chce je zjeść, dzieci muszą uciekać z jej piernikowej twierdzy i bronić się przed potworkami ze słodyczy. Jak widać potrzebna jest odrobina kreatywności.
+
+Czy są jakieś prawne konsekwencje wzorowania się na innych grach? Na gruncie prawa polskiego reguł gier nie można zastrzec, opatentować ani objąć żadną inna formą ochrony prawnej. Ustawa o prawie autorskim i prawach pokrewnych z 1994 r. zawiera następującą definicję utworu: każdy przejaw działalności twórczej o indywidualnym charakterze, ustalony w jakiejkolwiek postaci, niezależnie od wartości, przeznaczenia i sposobu wyrażenia. Ochronie podlega więc jedynie konkretna realizacja danego pomysłu, będąca utworem: specyficzne elementy interfejsu, konkretne grafiki. Mechanika czy zwyczajnie mówiąc zasady, nie mogą być objęte ochroną. Czy to oznacza, że można tworzyć wierne kopie dowolnych gier? I tak, i nie, wszystko jest bardzo rozmyte. Wiele elementów gier, które możemy próbować kopiować, może być zarejestrowane jako znak handlowy (znakiem handlowym może być np. schemat kolorów). Próba kopiowania może zakończyć się w sądzie. Dopóty, dopóki nie będziemy tworzyć wiernych kopii oryginalnych gier, a jedynie czerpać z rozwiązań stosowanych w ich mechanikach, nie musimy się obawiać, że ktoś wytoczy nam sprawę. Warto jednak trzymać rękę na pulsie i co jakiś czas sprawdzać, czy nic nie zmieniło się w tej materii.
+
+Czy można stworzyć i wydać grę za darmo?
+
+Mimo, że większość technologii jest darmowa (jak usługi typu Swarm czy Flurry) stworzenie gry bez zaangażowania środków nie jest niestety możliwe, nawet na tak otwartej platformie jaką jest Android. Do dyspozycji mamy darmowe silniki przeznaczone tylko na platformę Android jak AndEngine, lub wieloplatformowe rozwiązania jak Unity. Jeżeli planujemy zdobyć inne rynki mobilne, na przykład iOS lub Windows Phone, musimy się przygotować na to, że rozwiązania wieloplatformowe są zazwyczaj płatne. Przykładem może być Corona SDK pozwalająca na tworzenie gier w języku Lua i łatwe przenoszenie ich na inne środowiska niż Android.
+
+AndEngine
+http://www.andengine.org/
+Java
+Darmowy
+Wraz z silnikiem dostarczany jest rozbudowany zestaw przykładów. Niestety nie posiadają one komentarzy z wyjaśnieniem dlaczego coś jest zrobione tak a nie inaczej. Mimo tej wady, budowa silnika jest względnie prosta, co pozwala na dość szybkie budowanie prototypów. Zaletą jest też duże forum dyskusyjne skupiające społeczność twórców korzystających z AndEngine. Wadą jest istnienie dwóch wersji silnika: GLES1 oraz GLES2 i jednocześnie brak lub szczątkowa ilość dokumentacji na temat różnic między wersjami. Duża część przykładów na różnych blogach i forach traktuje o wersji GLES1. Silnik może być dość wolny w przypadku niektórych zastosowań. Głównie przeznaczony do tworzenia gier dwu wymiarowych.
+Unity
+http://unity3d.com/unity/
+C#
+Unity Script
+Boo
+Płatny
+Rozbudowany silnik 3D, pozwalający tworzyć gry na dowolną platformę: zarówno mobilną jak i pc lub konsole. Dla twórców gier dostępny jest sklep z zasobami: grafika, dźwięk, modele 3D oraz narzędzia służące do edycji scen oraz animacji. Wysoką barierą wejścia jest konieczność poświęcenia pewnego czasu na nauczenie się sposobu działania silnika. Sam koszt narzędzia też nie jest niski.
+Game Maker: Studio
+http://www.yoyogames.com/make
+GML
+Płatny
+Twórca dostaje do dyspozycji rozbudowane narzędzie z graficznym interfejsem użytkownika pozwalające budować gry nawet bez znajomości jakiegokolwiek języka programowania. Bardzo szybkie prototypowanie prostych gier pozwala przekonać się, czy tworzona przez nas mechanika jest grywalna. Zasadniczą wadą jest trudność w implementacji złożonej logiki, głównie z powodu ograniczeń języka GML stworzonego na potrzeby Game Maker: Studio.
+Corona SDK
+http://www.coronalabs.com
+Lua
+Płatny
+Bardzo popularny framework pozwalający na tworzenie gier za pomocą języka Lua. Dzięki zastosowaniu języka skryptowego SDK jest łatwy w opanowaniu oraz znacznie przyspiesza tworzenie aplikacji. Prototypowanie i testowanie różnych mechanik jest dzięki temu szybkie i prawie bezbolesne. Jednakże nauka nowego języka programowania może być uważana za wadę. Mimo, że istnieje wersja darmowa, nie można publikować aplikacji przy jej użyciu. Bardzo bogate API pozwala na obsługę wielu funkcji urządzenia jak akcelerometr lub gps, jednakże Corona SDK to produkt o zamkniętych źródłach i jeżeli coś nie działa lub nie jest obsługiwane, nie przeskoczymy łatwo tego problemu.
+Gideros
+http://www.giderosmobile.com/
+Lua
+Darmowy
+Kolejne rozwiązanie bazujące na języku Lua. SDK posiada własne IDE ułatwiające pracę z frameworkiem, testowanie, podpowiadanie składni i łatwy podgląd API pozwalające na przyspieszenie pracy. W przeciwieństwie do Corona SDK, Gideros ma darmową opcję w swojej ofercie. Jedynym warunkiem korzystania z darmowej wersji jest wyświetlenie ekranu z logo firmy przed załadowaniem gry. Jeżeli sprzedaż gry przyniesie zysk większy niż 100 tysięcy dolarów, należy wykupić licencję Pro.
+Moai
+http://getmoai.com/
+Lua
+Darmowy
+Projekt open source. Korzystanie z niego jest w pełni darmowe, jednakże pełen komfort pracy uzyskamy dopiero po kupieniu dedykowanego IDE, które kosztuje około 40 dolarów. Framework posiada bogate API, niestety w wielu miejscach bardzo słabo udokumentowane lub z nieaktualną dokumentacją. Wiele aspektów ukrytych w innych frameworkach w wypadku Moai zależy od programisty, co oznacza dłuższy czas nauki szczegółów dotyczących silnika i budowy gry.
+libGDX
+http://libgdx.badlogicgames.com/
+Java
+Darmowy
+Jeden z najszybszych frameworków do pisania gier w Javie. Jest całkowicie darmowy, jednakże wsparcie można uzyskać tylko poprzez oficjalne forum oraz wiki. Głównie służy do realizowania gier 2D, których lista jest już całkiem pokaźna. Wspierane jest kilka platform w tym HTML5. Ze względu na budowę frameworka, możliwe jest tworzenie gry na Androida i testowanie jej bez urządzenia lub emulatora, gra uruchamiana jest wtedy jako aplikacja desktopowa Java.
+Tabela: Na rynku istnieje obecnie kilkanaście frameworków przeznaczonych do tworzenia gier, zarówno 2D, jak i 3D. W zależności od kosztów, jakie jesteśmy gotowi ponieść, dostępnych jest dla nas wiele rozwiązań.
+
+Kolejnym aspektem jest tworzenie grafiki oraz dźwięku. Dla wielu płatnych narzędzi, jak znany wszystkim Photoshop, istnieją darmowe odpowiedniki. Jednakże jeżeli mamy zatrudnić profesjonalnego grafika wiąże się to z dodatkowymi kosztami. Pozostają też aspekty testowania tworzonych gier i wejścia na market. Teoretycznie grę możemy stworzyć od początku do końca bez jakiegokolwiek urządzenia, jednakże szybko okazuje się, że w praktyce jest to niemożliwe albo bardzo trudne. Emulator dostarczany z system Android może nie pozwolić na uruchomienie gier wykorzystujących OpenGL, albo praca z nim stanie się zbyt uciążliwa ze względu na powolne działanie. Jako początkujący twórcy musimy więc mieć do dyspozycji przynajmniej jedno urządzenie, które pozwoli nam na wygodną pracę i testowanie, co wiąże się z kosztem co najmniej kilkuset złotych. W przypadku Google Play musimy uiścić także jednorazową opłatę w wysokości 25 dolarów w czasie zakładania konta za pomocą którego wystawiać będziemy nasze gry. Większość twórców czeka z tym do momentu ukończenia swojego pierwszego dzieła. Google tłumaczy opłatę jako sposób na zwiększenie jakości udostępnianych aplikacji. GetJar stanowiący bezpośrednią konkurencję dla Google Play nie posiada opłat wejściowych co międzyinnymi stanowi o jego sukcesie. Najważniejsze, o czym nie wspomniałem dotąd, to czas. Zanim niezależny twórca osiągnie taki sukces jak autor Minecraft’a, musi zazwyczaj pracować, aby zarobić na utrzymanie. Oznacza to, że większej części swojego czasu nie poświęca na tworzenie, a pisanie gry po godzinach wymaga od niego wytrwałości i cierpliwości, by doprowadzić projekt do końca.
+
+Co dalej?
+
+Tworzenie gier, nawet Indie, nie jest proste i szybkie. Zanim nasza gra pojawi się na markecie może minąć znacznie więcej czasu niż przewidywaliśmy, szczególnie, że wiele wykorzystywanych przez nas technologii wymaga nauki. Na sam koniec zachęcam do poczytania na temat samego projektowania gier. Dobrą początkową lekturą może być książka “Rules of Play - Game Design Fundamentals” autorstwa Katie Salen i Erric Zimmermana.

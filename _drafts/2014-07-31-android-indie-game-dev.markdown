@@ -36,23 +36,21 @@ There are many places you can sell your game in (there are around 30 different A
 3. *GetJar* - http://getjar.com/ - Its marketed as a second largest app market in the world. It might be true due to the fact its available also on platforms other then Android. Most commonly installed on devices which do not have access to official Google Play market. Angry Birds from Rovio was first on GetJar before it came to Google Play.
 4. *SlideME* - http://slideme.org/ - Its marketed as a "better" alternative to Google Play, it takes a lower share for selling the app. It allows to get the app through a web browser or an app on the device.
 
+We now know how and where to sell, but which model should be picked? If we already have finished our game and we can count on a good advertisement then maybe we should try with a free demo and paid full model. Free version doesn't have to be limited in any way, it can just use worse resources (often HD versions of the game are paid). Demo version is sometimes the only way to go for our game, banners with ads might often not fit into our game UI or we do not have enough game items to offer for IAP. Some developers often release their game with price higher then the one they want just to have option to create deals where they cut the price. Sneaky!!
+
+Adds force us inherently to make room for them in our UI. Either we will squeeze some space or we will allow ad banners to overlap our interface. User might click an ad by mistake in such case -- more income for us? or maybe not if users will get angry and comment. If we are doing this on purpose we might end will lower download rate.
+
+Also don't overdo with the amount of banners, game can have a fragile artistic vision which can be easily broken with colorful ads not matching our style. How would you like to look at bright colorful images on a banner in a dark noir style game?
+
+So, once you know where to place an ad then how can you earn on them? There are some acronyms that you will often read: CPC and CPM.
+
+1. CPC - Cost Per Click - in most cases we will only get paid if someone clicks the ad / banner
+2. CPM - Cost Per Mille (Cost per thousand views) - the letter `M` is from roman numer meaning a thousand
+
+Google AdMob is based on the CPC although determining the amount of money for one click may be difficult, it depends on app type, target audience etc. To better know what kind of money would such solution generate, you can simply integrate it into your game and just check after few weeks.
 
 
 
-Pozostaje odpowiedzieć na pytanie, jaki model powinniśmy wykorzystać. Jeżeli ukończyliśmy już naszą grę i mamy szansę na dobrą reklamę, możemy pokusić się o próbę sprzedaży na jednym lub kilku z dostępnych marketów. Najczęściej stosowanym podejściem jest tworzenie dwóch wersji: bezpłatnej demonstracyjnej z mniejszą liczbą poziomów lub w inny sposób ograniczonej oraz płatnej posiadającej wszystko, co chcemy zaoferować graczom. Często jest to także wersja HD z lepszą jakością grafik czy dźwięków. Wersja demonstracyjna oraz płatna to dobry pomysł, jeżeli nie mamy możliwości zintegrowania innych form monetyzacji. Czasami interfejs naszej gry nie będzie pozwalać na dogodne umieszczenie banerów z reklamami, albo nie będziemy posiadać tyle dodatkowych treści, które nadawałyby się do sprzedawania we wbudowanym sklepie. Jedyną opcją jaka nam wtedy pozostaje jest właśnie sprzedaż. Często twórcy ustalają cenę wyższą niż docelowa, dając sobie możliwość ogłaszania promocji poprzez zmniejszenie ceny. Z jednej strony jest to dość nieuczciwa praktyka niemniej może zachęcić do kupna wielu niezdecydowanych.
-
-Wspomniane już reklamy wymagają od nas poświęcenia miejsca na ekranie. Z jednej strony oznacza to, że albo odpowiednio dostosujemy swój interfejs wcześniej albo pozwolimy by reklama przesłoniła go częściowo. Częściowe zasłonięcie interfejsu może oznaczać, że gracze będą przypadkowo klikać w reklamy, tym samym generując dla nas zysk. Jednak trzeba liczyć się z tym, że zostanie to zauważone przez użytkowników i bezlitośnie wytknięte w komentarzach, co skutkować może zmniejszeniem się ilości pobrań.
-
-Pamiętacie, jak irytujące były reklamy w pierwszej wersji gry Angry Birds na urządzeniu o małym ekranie? Wielokrotnie chcąc kliknąć lecącego ptaka klikało się w reklamę, co zraziło  do gry wiele osób. Należy też pamiętać o odpowiedniej ilości wyświetlanych reklam. Jeżeli na każdej planszy, na każdym menu użytkownika widać będzie baner, zniechęcenie graczy jest więcej niż prawdopodobne. Jeżeli mamy już pewną artystyczną wizję związaną z samą grą, baner reklamowy może kompletnie zniszczyć wrażenia z niej czerpane.
-
-Rys. Eufloria raczy gracza delikatnymi pastelowymi kolorami, jest bardzo stonowana, bez zbędnych elementów dekoracyjnych. Dodanie banera reklamowego mogłoby całkowicie popsuć jej stylistykę. Trzeba pamiętać, że jako twórca nie mamy wpływu na wyświetlane reklamy, ich kolorystykę i treść.
-
-Wraz z reklamami, pojawiły się dodatkowe akronimy mówiące o tym, za co twórcy będą zarabiać. Aktualnie najczęściej spotykane są CPC oraz CPM. Jakie mają znaczenie dla twórcy?
-CPC - Cost Per Click - (z ang. koszt za kliknięcie) pieniądze otrzymamy wyłącznie w przypadku, w którym gracz kliknie wyświetlaną przez nas reklamę.
-
-CPM - Cost Per Mille - (z ang. koszt za tysiąc wyświetleń), znajdująca się w akronimie litera ‘M’ pochodzi od rzymskiej cyfry oznaczającej tysiąc. Dostawca reklam zapłaci nam za każde tysiąc wyświetleń jego reklam w naszej aplikacji.
-
-AdMob firmy Google opiera się na zasadzie działania CPC. Jednakże jednoznaczne określenie kosztu kliknięcia w AdMob jest trudne, ponieważ zależy od wielu czynników takich jak: rodzaj aplikacji, docelowa grupa odbiorców itp. Koszt kształtują też reklamodawcy współpracujący z Google. Aby móc lepiej przekonać się, jakie pieniądze będą generować reklamy w AdMob, najlepszym sposobem będzie integracja tego rozwiązania na kilka tygodni i w ten sposób analiza potencjału naszej aplikacji.
 
 Jeżeli nie chcemy niszczyć naszej artystycznej wizji pstrokatymi reklamami, do dyspozycji pozostają nam inne formy monetyzacji. Notyfikacje typu push pojawiające się na obszarze powiadomień urządzenia mogą zawierać reklamy. Wydają się wręcz idealnym rozwiązaniem ponieważ nie jesteśmy zmuszeni ingerować w nasz interfejs. Jednakże zyskały one złą sławę wśród użytkowników, głównie z powodu ich nadmiernej ilości oraz pojawiania się w losowych momentach. Prekursorem w dziedzinie takiej reklamy była firma AirPush, udostępniająca odpowiednie API dla twórców. Ta sama firma, chcąc zachęcić twórców, podaje dane, według których użytkownicy ściągają obecnie około 800 tysięcy aplikacji dziennie, wyświetlających właśnie reklamy typu push.
 

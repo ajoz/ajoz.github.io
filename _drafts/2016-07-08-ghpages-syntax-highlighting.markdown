@@ -21,6 +21,7 @@ Article plan:
 7) how to allow easy code copying (without line numbers)
 
 
+https://zpao.com/posts/adding-line-highlights-to-markdown-code-fences/
 
 https://alexpeattie.com/blog/github-style-syntax-highlighting-with-pygments
 

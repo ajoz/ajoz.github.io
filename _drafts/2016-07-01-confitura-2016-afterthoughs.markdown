@@ -8,6 +8,8 @@ disqus: true
 ---
 ###  Jak dotrwac do emerytury
 
+Plan B, Oszczednosci, Zdrowie i ciagla praktyka
+
 ### Szczęśliwy developer
 
 Kudos Cards - uczymy sie dziekowac i przyjmowac komplementy. Pudelko gdzie kazdy moze wrzucac komplementy dla swoich kolegow. Po okreslonym czasie wyciagamy kartki i czytamy na glos zeby wszyscy na forum wiedzieli. Okazuje sie ze ludzie maja problemy z przyjeciem podziekowania. Idealnie sprawdza sie gdy pracuja ludzie w jednym miejscu, ale wysylane takze mailem podsumowanie. Ściana chwaly (Kudo Wall) - zeby obejrzec ze ktos cie docenia. Co gdy ktos nie dostaje karteczek? Trzeba sie ta osoba zainteresowac. Mozliwe ze nie radzi sobie spolecznie. Mozna to zastosowac na poziomie projektow.

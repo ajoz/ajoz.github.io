@@ -1,7 +1,9 @@
 ---
 layout: post
+date: 01-07-2016
+author: Andrzej Jóźwiak
 title: How I almost reinvented Hamcrest
-tags: scala java hamcrest junit groovy
+tags: java hamcrest junit
 disqus: true
 ---
 

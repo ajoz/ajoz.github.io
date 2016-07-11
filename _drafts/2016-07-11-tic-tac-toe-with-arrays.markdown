@@ -7,7 +7,7 @@ tags: fpconcepts scala jvm
 disqus: true
 ---
 
-
+As you probably remember I'm currently reading "Seven languages in seven weeks". There is a chapter about `Scala`, my previous article was inspired about a piece of code I found there. At the end of the same chapter there is a list of exercises to do and one of them is implementing a tic-tac-toe game. 
 
 https://en.wikipedia.org/wiki/Tic-tac-toe
 

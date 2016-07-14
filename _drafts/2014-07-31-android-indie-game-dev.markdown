@@ -34,80 +34,62 @@ There are many places you can sell your game on (there are around 30 different A
 3. **GetJar** - http://getjar.com/ - Its marketed as a second largest app market in the world. It might be true due to the fact its available also on platforms other then Android. Most commonly installed on devices which do not have access to official Google Play market. Angry Birds from Rovio was first on GetJar before it came to Google Play.
 4. **SlideME** - http://slideme.org/ - Its marketed as a "better" alternative to Google Play, it takes a lower share for selling the app. It allows to get the app through a web browser or an app on the device.
 
-We now know how and where to sell, but which model should be picked? If we already have finished our game and we can count on a good advertisement then maybe we should try with a free demo and paid full model. Free version doesn't have to be limited in any way, it can just use worse resources (often HD versions of the game are paid). Demo version is sometimes the only way to go for our game, banners with ads might often not fit into our game UI or we do not have enough game items to offer for IAP. Some developers often release their game with price higher then the one they want just to have option to create deals where they cut the price. Sneaky!!
+We now know how and where to sell, but what model should be picked? If we already have finished our game and we can count on a good advertisement then maybe we should try with a free demo and a paid full product.
 
-Adds force us inherently to make room for them in our UI. Either we will squeeze some space or we will allow ad banners to overlap our interface. User might click an ad by mistake in such case -- more income for us? or maybe not if users will get angry and comment. If we are doing this on purpose we might end will lower download rate.
+Free versions dont have to be limited in any way, they can just use worse resources (often HD versions are paid versions). Demo version is sometimes the only way to go for our game, banners with ads might often not fit into our game UI or we do not have enough game items to offer for IAP. Some developers often release their game with price higher then the one they want just to have option to create *deals* where they cut the price. Very sneaky! ;-)
 
-Also don't overdo with the amount of banners, game can have a fragile artistic vision which can be easily broken with colorful ads not matching our style. How would you like to look at bright colorful images on a banner in a dark noir style game?
+Adds force us inherently to make room for them in our UI. Either we will squeeze some space or we will allow ad banners to overlap our interface. Users might click an ad by mistake in such case -- more income for us? or maybe not? if users will get angry, they can spread word quickly about a game.
+
+Also don't overdo with the amount of banners! Games often have fragile artistic visions which are easily broken with colorful ads. How would you like to look at bright colorful images on a banner in a dark noir game?
 
 So, once you know where to place an ad then how can you earn on them? There are some acronyms that you will often read: CPC and CPM.
 
-1. CPC - Cost Per Click - in most cases we will only get paid if someone clicks the ad / banner
-2. CPM - Cost Per Mille (Cost per thousand views) - the letter `M` is from roman numer meaning a thousand
+1. **CPC** - *Cost Per Click* - in most cases we will only get paid if someone clicks the ad / banner
+2. **CPM** - *Cost Per Mille* (Cost per thousand views) - the letter `M` is a Roman number meaning a thousand
 
-Google AdMob is based on the CPC although determining the amount of money for one click may be difficult, it depends on app type, target audience etc. To better know what kind of money would such solution generate, you can simply integrate it into your game and just check after few weeks.
+**Google AdMob** is based on the CPC although determining the amount of money for one click may be difficult, it depends on *app type*, *target audience* etc. To better know what kind of money would such solution generate, you can simply integrate it into your game and just check after few weeks.
 
-If we do not want to pollute our artistic vision with ads we have other means of monetization, for example push notifications can be used for advertisement. They seem perfect as we do not have to mess our UI to use them, unfortunately they have a really bad opinion amongst gamers. They were shown too often and in random moments. I think that the first company which introduced this type of monetization was `AirPush`. They say they have 800k active users but this kind of ads are a bit confusing. Users often don't know from where the ad is coming and treat is as a sign of malware (its marked as a second biggest problem for user right after malware). A word of warning, app called `APNDriod` was removed from Google Play after a lot of user reports, the main reason was excessive amount of notifications. True or not, you need to remember that with Android 4.2 users can now block notifications from a given app!
+If we do not want to pollute our artistic vision with ads we have other means of monetization. One of such alternative options are **push notifications**. They seem perfect as we do not have to mess our UI to use them. All ads are displayed as messages / links in the notification area (panel) of a smartphone. My humble word of warning: **they have a really really really BAD opinion** and can drag your app down :-(
 
-Whichever type of ads you pick remember to have it from day one, you don't want to surprise your users later on in your app life cycle. Adding monetization after some time might cause a loss of players. If not ads than what?
+I think that the first company which introduced this type of monetization was **AirPush**. They say they have 800k active users, it's a really impressive number but remember that this kind of an ad is often confusing for an average user. Users often don't know what is causing a notification to pop up and treat it as a sign of malware (Security companies list oppressive notifications as the second biggest problem right after malware).
 
-Maybe you can give your game for free and earn money through selling maps, in game items, in game currency etc. You can find many articles about this form of monetization: **microtransactions**, **free-to-play**, **freemium**. Of course there are some issues with selling in game items. A new term was created among gamers which is *"pay-to-win"*. It's a negative term that describes all games that have microtransactions allowing achieving easier victory, its especially frustrating if you can buy something in multiplayer competitive games. For example World of Tanks allows buying golden bullets that deal more damage to players and still this game is very successful.
+App called **APNDriod** was removed from Google Play after a lot of user reports, the main reason was excessive amount of notifications. True or not, you need to remember that with Android 4.2 users can now block notifications for a chosen app!
 
-Selling cosmetic items and convenience is the most accepted form of monetization. What is convenience you ask? In most cases its time after which a player gains access to a certain thing in the game. Let's say we created a multiplayer game with multiple different weapons, you have two ways of gaining access to said weapons: buy them in in-game store, unlock them through playing the game (this takes time). Your not restricting your players access to these weapons you just give them choice, either they will pay a small one time fee to get it or they will just wait until the weapon naturally unlocks for them. Clear and simple. You need to balance the cost of the weapon both money wise and time wise, people don't like to feel obligated to do something.
+Whichever type of ads you pick remember to have it from day one, you don't want to surprise your users later on in your app life cycle. Adding monetization after some time might cause a loss of players.
 
-What do I need non paying players for? Its simple, the more players there are, the more popular (alive) your game will be. Healthy and lively community will reassure your players and they will be more willing to spend money on your game.
+#### If not ads than what?
 
-For microtransactions your game needs to be designed from the ground up: ui, shop, what will be sold, gameplay in context of buying items etc. You also need to be ready for complaints about payment, credit card transaction withdrawal and so on. Its better to be prepared beforehand.
+Maybe you can give your game for free and earn money through selling maps, in game items, in game currency etc. You can find many articles about this form of monetization: **microtransactions**, **free-to-play**, **freemium**. It's not without issues.
+
+A new term was created among gamers which is **"pay-to-win"**. It's a negative term that describes all games that have microtransactions allowing achieving easier victory, its especially frustrating if you can buy something in multiplayer competitive games. For example **World of Tanks** allows buying golden bullets that deal more damage to players. Despite this, **WoT** is very successful.
+
+Selling cosmetic items and convenience is the most accepted form of monetization. What is convenience you ask?
+
+In most cases its time after which a player gains access to a certain thing in the game. Let's say we created a multiplayer game with multiple different weapons, you have two ways of gaining access to said weapons: buy them in in-game store or unlock them through playing the game (this takes time). Your not restricting your players access to these weapons you just give them choice, either they will pay a small one time fee to get said weapons or they will just wait until the item naturally unlocks for them. Clear and simple. You need to balance the cost of items both money wise and time wise, gamers don't like to feel obligated to do something.
+
+You might think what do you need non paying players for?
+
+Its simple, the more players there are, the more popular (alive) your game will be. Healthy and lively community will reassure your players and they will be more willing to spend money, which is your end goal.
+
+Game needs to be designed from the ground up: **ui**, **shop**, **what** will be sold, **gameplay** in context of buying items etc. You also need to be ready for complaints about payment, credit card transaction withdrawal and so on. Its better to be prepared beforehand.
 
 ## Maintaining interest
 
-So how to keep your userbase stable / growing? Fundamentally the main way is to update the content, however, nothing keeps interest like player competition or increasing game difficulty. Competitive doesn't necessarily means mulitplayer -- scoreboards or achievement boards allow users to compete with one another. You have broad design space for this: most kills, fasts level finish, lowest amount of deaths in a level, as I said possibilities are endless.
+So how to keep your userbase stable or better yet growing?
 
-Recently "star rating" became very popular, it allows to inform the player about "how good" he finished a game level with, the more stars you get the better you finished. Sometimes the star system is combined with content unlocking.
+Fundamentally the main way is to update the content, however nothing keeps interest like player competition or increasing game difficulty. Competitive doesn't necessarily mean mulitplayer -- scoreboards or achievement boards allow users to compete with one another. You have a broad design space for this: most kills, fasts level finish, lowest amount of deaths in a level, as I said possibilities are endless.
 
+Recently **star rating** became very popular. It allows to inform the player about **"how good"** he finished a game level, the more stars he gets the better he finished. Sometimes the star system is combined with content unlocking. Items, maps, characters, skins, options become available after gathering certain amount of said stars.
 
+Achievment system is a much more complicated mechanism than a mere star rating. Anyone who ever played an MMO (Masive Multiplayer Online) game will know how absorbing, challanging or frustrating they can be. MMO achievments are a different beast, carefully designed they start with simple things involving only a one player like reaching a certain character level or fighting N enemies (where N is some arbitrary number -- often in thousands or tens of thousands, yes I'm looking at you World of Warcraft). After a player is hooked, he will less likely leave the game for another title due to large time investment.
 
+#### What can a mobile game use?
 
-System osiągnięć jest znacznie bardziej skomplikowanym mechanizmem niż to, co znamy pod postacią prostych gwiazdek. Doskonale znane z gier Masive Multiplayer Online (typ gry rozgrywanej przez wielu graczy jednocześnie) osiągnięcia to skomplikowana forma wyzwań dla gracza. Zaczynają się od prostych działań, takich jak zdobycie określonego poziomu w grze czy pokonanie pewnej liczby przeciwników. Kolejnym etapem są  akcje trudne i pracochłonne, jak zdobycie określonego przedmiotu, - często przy pomocy innych graczy. Naturalnym efektem wprowadzenia osiągnięć będzie rywalizacja graczy między sobą. Umożliwić to może wiele istniejących rozwiązań takich jak Swarm czy HeyZap. Łatwo się domyślić, że powracający zmotywowani gracze będą częściej oglądali wyświetlane przez nas banery lub kupowali w naszym wbudowanym sklepie, co może zwiększyć założony przychód.
-
-Swarm
-http://swarmconnect.com/
-Rankingi wyników
-Tabele osiągnięć
-In-App-Purchase
-Social Gaming
-Przechowywanie danych w chmurze
-Analiza danych
-Wszystkie usługi są całkowicie darmowe, nie ma miesięcznych opłat ani żadnej innej formy subskrypcji. W przypadku wykorzystania wbudowanego IAP, Swarm pobiera prowizje od każdego zakupu.
-Scoreloop
-http://www.scoreloop.com/
-Rankingi wyników
-Tabele osiągnięć
-In-App-Purchase
-Social Gaming
-Wyzwania
-Wyniki w chmurze
-Notyfikacje Push
-Wirtualna waluta
-Cross promotion
-Analiza danych
-Wszystkie usługi są całkowicie darmowe, nie ma miesięcznych opłat ani żadnej innej formy subskrypcji. W przypadku wykorzystania IAP, kupowania wirtualnej waluty, Scoreloop pobiera prowizje od każdego zakupu.
-Scoreninja
-http://scoreninja.appspot.com/
-Rankingi wyników
-Brak opłat, brak gwarancji stabilności i działania usługi.
-Scoreoid
-http://www.scoreoid.net/
-Rankingi wyników
-Tabele osiągnięć
-Zarządzanie aktywnymi graczami
-System notyfikacji
-Geolokacja
-Wyświetlanie treści w zależności od platformy
-Analiza danych
-Aktualnie usługa jest w fazie beta i jest darmowa. Na usługę nałożone są pewne ograniczenia jak np.: quota na składowane dane, po przekroczeniu której należy skontaktować się ze wsparciem technicznym Scoreoid. W przyszłości przewidzianych jest kilka planów płatności.
-HeyZap
-http://developers.heyzap.com/
+1. **Swarm** - http://swarmconnect.com/ - scoreboards, achievments, IAP, social gaming, cloud data, analytics - every service is free of charge, there are no monthly fees or any other form of subscription. In case of using the built in IAP, Swarm will take commision for every transaction.
+2. **Scoreloop** - http://www.scoreloop.com/ - scoreboards, achievments, IAP, social gaming, challanges, scores stored in cloud, push notifications, support for virtual currency, cross promotion, analytics - similarly to Swarm everything is free. Scoreloop will take commision for every IAP transaction.
+3. **Scoreninja** - http://scoreninja.appspot.com/ - scoreboards - its free, it can work but it can also fail
+4. **Scoreoid** - http://www.scoreoid.net/ - scoreboards, achievments, active players management, notification system, geolocation, platform specific content, analytics - currently this service is in beta phase and due to this its free. There are some limitations like a quota for the stored data.
+5. **HeyZap** - http://developers.heyzap.com/
 Rankingi wyników
 Wyzwania
 Tabele osiągnięć

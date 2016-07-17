@@ -89,51 +89,21 @@ Achievment system is a much more complicated mechanism than a mere star rating. 
 2. **Scoreloop** - http://www.scoreloop.com/ - scoreboards, achievments, IAP, social gaming, challanges, scores stored in cloud, push notifications, support for virtual currency, cross promotion, analytics - similarly to Swarm everything is free. Scoreloop will take commision for every IAP transaction.
 3. **Scoreninja** - http://scoreninja.appspot.com/ - scoreboards - its free, it can work but it can also fail
 4. **Scoreoid** - http://www.scoreoid.net/ - scoreboards, achievments, active players management, notification system, geolocation, platform specific content, analytics - currently this service is in beta phase and due to this its free. There are some limitations like a quota for the stored data.
-5. **HeyZap** - http://developers.heyzap.com/
-Rankingi wyników
-Wyzwania
-Tabele osiągnięć
-Integracja z portalami społecznościowymi
-Reklamy
-SDK oraz wszystkie usługi są darmowe. HeyZap zarabia na reklamach i wypłaca prowizje za wyświetlone reklamy.
-Geosophic
-http://www.geosophic.com
-Rankingi wyników powiązane z geolokacją.
-Darmowa do 20 tysięcy zapytań dziennie. W przypadku przekroczenia limitu niezbędny jest indywidualny kontakt z Geosophic.
-Skiller
-http://www.skiller-games.com/
-Wsparcie dla multiplayer
-System turniejowy
-Wyzwania
-Wyniki w chmurze
-Rankingi wyników
-Tabele osiągnięć (osobne dla każdej z gier oraz dla współzawodnictwa z przyjaciółmi)
-Listy znajomych
-In-App-Purchase
-Wirtualna waluta
-Reklamy
-SDK oraz wszystkie usługi są darmowe. Bardzo trudno odnaleźć informacje o ewentualnych prowizjach w przypadku reklam, IAP oraz wirtualnej waluty.
-Tabela: Jeżeli chcemy wzbogacić naszą grę w tabele wyników, rankingi lub system osiągnięć, nie musimy pisać ich od zera.
+5. **HeyZap** - http://developers.heyzap.com/ - scoreboards, achievments, social network integration, ads - HeyZap SDK and all its services are free, they are profiting from the displayed ads
+6. **Geosophic** -  http://www.geosophic.com - scoreboards associated with a geolocation - service is free until 20k requests per day. In case of exceeding this limit an individual contact with Geosophic will be needed.
+7. **Skiller**  - http://www.skiller-games.com/ - multiplayer support, tournament support, achievments, scores stored in cloud, scoreboards, friends lists, IAP, virtual currency, ads - SDK and all the services are free. After a quick look its hard to find any information about commisions taken by Skiller for ads,  IAP and virtual currency.
 
-Jak zbierać dane, by ulepszyć grę?
+## Gathering and analysis of game data
 
-Same statystyki pobrań nie stanowią wystarczającej informacji o tym, czy nasza gra podoba się użytkownikom. Informacje o tym, jak długo przeciętny gracz bawi się naszym dziełem, jak daleko udaje mu się przejść, jakie ekrany odwiedza najczęściej, których elementów interfejsu używa, to tylko przykład danych, dzięki którym możemy analizować zachowania użytkowników. Ma to kolosalne znaczenie, jeżeli korzystamy z jednego z przedstawionych wcześniej sposobów monetyzacji. Analiza korzystania z naszej aplikacji pozwala odpowiednio rozlokować banery reklamowe i umiejscowić odniesienia do wbudowanego sklepu. Możliwe, że ekran, który wyświetla reklamy jest w ogóle przez graczy nieoglądany! Obecnie na rynku jest wiele rozwiązań pozwalających na zbieranie anonimowych danych o użytkowaniu. Najbardziej popularny, Google Analytics, znany przede wszystkim z możliwości analizowania ruchu na stronach www, zagościł też na platformie mobilnej Android. Konkurencję dla niego stanowią moduły odpowiedzialne za zbieranie danych wbudowane we frameworki stosowane do implementacji rankingów. Przykładem może być Swarm lub Scoreloop. Bardzo popularny ostatnio stał się Flurry, stosowany w takich grach jak Angry Birds. Duże firmy jak EA, SEGA czy Zynga także stosują to rozwiązanie.
+Download statistics alone won't tell us exactely if our game is popular or liked. We need more detailed information. A good example would be to check what's the average time the user spends with our game, what's the most common level players have problems with, which screens he checks the most etc. This will allow us to adjust our app better to the needs of our users. Happier player means more income from monetization.
 
+## Inspiration and its legal aspects?
 
-Rys. W grze Splendor of Giza wykorzystanie Flurry pozwala stwierdzić, jak użytkownicy nawigują w aplikacji i które ekrany otwierają najczęściej.
+What to do when we run out of ideas for new games or game mechanics? As always Internet is here to the rescue. You can easily find websites gathering designers willing to exchange and discuss ideas. Believe me many things that you thought brilliant will end up criticized. If you don't want to get eaten by strangers you can read sites full of game mechanics and game prototypes, which can be used right away like: "Three Hundred Mechanics".
 
-
-Rys. Flurry pozwala na rozbudowaną kontrolę wykorzystania naszej aplikacji. Informuje o częstotliwości wykorzystania, długości sesji oraz ilości nowych i powracających użytkowników. Wszystko prezentowane jest za pomocą interfejsu webowego.
-
-Inspiracja i jej prawne aspekty
-
-Co robić, kiedy brakuje pomysłów na tematykę gry lub jej mechanikę? Z pomocą przychodzi Internet, gdzie można znaleźć strony skupiające twórców wymieniających się pomysłami. Wiele rzeczy, które nam wydawały się genialne, może faktycznie spotkać się ze sporą krytyką. Istnieją też strony zawierające całe listy wymyślonych już mechanik i prototypów gier, które możemy wykorzystać jak np. Three Hundred Mechanics.
-
-http://www.gamedesignideas.com/
-Ciekawie prowadzony blog. Autorzy omawiają w nim różne aspekty projektowania gier. Omawiane są pomysły na scenariusze, poziomy oraz mechaniki. Artykuły zawierają opisy i oceny istniejących już gier i zawartych w nich pomysłów.
-http://www.squidi.net/three/index.php
-Próba udokumentowania 300 pomysłów na różne mechaniki dla gier komputerowych. Według pierwotnego planu, na stronie miał być codziennie przedstawiany nowy pomysł przez 300 dni. Obecnie prace kontynuowane są w znacznie wolniejszym tempie. Zbiór jest bardzo ciekawy, albowiem do niektórych pomysłów stworzone zostały proste prototypy za pomocą HTML oraz javascript.
-http://gmc.yoyogames.com/
+1. http://www.gamedesignideas.com/ - Very interesting blog about game mechanics. Authors discuss there different aspects of game design, scenarios, levels, they are even analysing existing games. It's very helpfull to learn on the mistakes of others.
+2. http://www.squidi.net/three/index.php - It's an effort to document 300 different game mechanics. Initial plan was very bold, author wanted to present one game mechanic each day for 300 days. Life verified this plan and although work goes in much slower pace current list of described mechanics is detailed and vast. I like this site the most, thanks to concept images, and simple html + js prototypes for some of the mechanics.
+3. http://gmc.yoyogames.com/ - Discussion forum 
 Forum dyskusyjne społeczności skupionej wokół narzędzia Game Maker: Studio firmy yoyogames. Na forum dyskutuje wielu pasjonatów, którzy chętnie wymieniają się pomysłami i opiniami. Można uzyskać porady dotyczace naszych własnych pomysłów, jak i przyjrzeć się temu, co planują inni twórcy.
 http://www.streamingcolour.com/blog/game-idea-generator/
 Prosty generator pomysłów, propozycje tworzone są z trzech zbiorów kategorii. Niektóre dość niedorzeczne np. historical, sad, dark, FPS combined with puzzle game, set in a factory.
@@ -141,7 +111,6 @@ http://orteil.dashnet.org/gamegen
 Generator pomysłów pozwalający na tworzenie wielu propozycji i przechowywanie ich w schowku. Posiada dodatkową opcję eliminującą kompletnie niedorzeczne sugestie.
 
 
-Tabela: W przypadku braku pomysłów, można skorzystać z pomocy w Internecie. Fora dyskusyjne, grupy, tematyczne blogi pomogą nam przełamać blokadę twórczą.
 
 Propozycje tworzone przez generatory pomysłów mogą wydać się niedorzeczne, często okazują się jednak być dobrym początkiem. Dla przykładu, generator wylosował dla mnie: szczęśliwa krwawa gra dla dzieci dziejąca się na innej planecie. Na pierwszy rzut oka nic nie da się z tym zrobić, ale propozycje można podrasować, np.: Baba Jaga wysyła dzieci na inną planetę, gdzie chce je zjeść, dzieci muszą uciekać z jej piernikowej twierdzy i bronić się przed potworkami ze słodyczy. Jak widać potrzebna jest odrobina kreatywności.
 

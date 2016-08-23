@@ -23,11 +23,9 @@ Most designers will tell you that only an interesting idea counts, but you need 
 
 Well known game generes from pc or console often won't end as a success on mobile. A good example are `First Person Shooters (FPS)`. They need complicated control systems: `camera`, `movement`, `shooting`, `jumping`, `browsing equipment` which can at best be wonky on a touch device. Its quite frustrating when you obscure the view you need with your own fingers when your trying to interact with the game. FPS games often have on-screen controls but still they are not as responsive as a normal controller would be. You could always assume that players will use bluetooth controllers with your game, but are you willing to limit the market your game can be sold at?
 
-#### So how to design a game and sell it?
+### How?
 
-`Monetization` is a term that is spreading with lightning speed. It describes ways of earning profit on a given product (it doesn't necessary need to be a game).
-
-First you need to decide how you want to make profit on your game:
+`Monetization` is a term that is spreading with a lightning speed. It describes ways of earning profit on a given product (it doesn't necessary need to be a game[^1]). Depending on the game you need to decide the form of monetizing the content you'll be delivering. Currently there are few options available:
 
 1. **Sell** - for example on [`Google Play`](https://play.google.com/), [`Amazon Appstore`](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) or [`GetJar`](http://www.getjar.com/). Depending on the contract with the shop you will get a percentage from the sold game. They are giving you the platform, this is why you give them some compensation.
 2. **Ads** - in different forms: as banners inside the app, as notification bar adds, as popup windows. There are many solutions for example `Google AdMob` or `MobClix`. They will pay you either for displayed adverts or for each one clicked.
@@ -35,20 +33,26 @@ First you need to decide how you want to make profit on your game:
 4. **Virtual currency** - its a modified `IAP` solution, instead of selling particular map or skin, developer is selling in-game currency, which can be used to get additional content inside the game. Most often players have a possibility to acquire the currency just by playing the game, but it takes more time.
 5. **Mixed** - its a combination of all the above. For example `Tapjoy` is a solution that is using a virtual currency, players can get it by clicking displayed ads or by installing other apps in the `Tapjoy` network. Another very interesting solution is `AddOverlay` from `LeadBolt` which combines unlocking content with clicking ads. Player needs to click an advert to unlock content.
 
+### Where?
+
 Second thing is to pick a place you will sell your game in, but beware there are around 30 different Android app markets available. Several of possible markets are only available in certain world regions like `North America` or `Asia`.:
 
-1. **Google Play** - https://play.google.com/ - Its the default app market for the majority of android devices. Many people are used to browse the contents of this market in search of something new and exciting. If you do not have any previous experience with selling apps on Android, I advise you to start with this one first.
+1. **Google Play** - https://play.google.com/ - Its the default app market for the majority of android devices. If you do not have any previous experience with selling apps on Android, I advise you to start with this one first.
 2. **Amazon Appstore** - http://www.amazon.com/ - A well known alternative for `Google Play`, by default installed on Amazon Kindle Fire. Unfortunately its availability is limited to `USA` (it may change one day but keep this in mind). Each day one paid app is picked and released for free for a single day  (don't worry developers are compensated for this).
-3. **GetJar** - http://getjar.com/ - Its marketed as a second largest app market in the world. It might be true due to the fact its available also on platforms other then Android. Most commonly installed on devices which do not have access to official Google Play market. Angry Birds from Rovio was first on GetJar before it came to Google Play.
-4. **SlideME** - http://slideme.org/ - Its marketed as a "better" alternative to Google Play, it takes a lower share for selling the app. It allows to get the app through a web browser or an app on the device.
+3. **GetJar** - http://getjar.com/ - Its advertised as a second largest app market in the world. It might be true due to the fact its available also on platforms other then Android. Most commonly installed on devices which do not have access to official Google Play market like low end / budget phones and tablets. Angry Birds from Rovio was first on GetJar before it came to Google Play.
+4. **SlideME** - http://slideme.org/ - Its advertised as a "better" alternative to Google Play. For starters it takes a lower share for selling your app. It has some nice user oriented features like getting apps through a web browser in addition to a market app installed on the device.
 
-We now know how and where to sell, but what model should be picked? If we already have finished our game and we can count on a good advertisement then maybe we should try with a free demo and a paid full product.
+### What to pick?
 
-Free versions dont have to be limited in any way, they can just use worse resources (often HD versions are paid versions). Demo version is sometimes the only way to go for our game, banners with ads might often not fit into our game UI or we do not have enough game items to offer for IAP. Some developers often release their game with price higher then the one they want just to have option to create *deals* where they cut the price. Very sneaky! ;-)
+We now know how and where to sell, but what model should we pick? If we already have finished our game and we can count on a good advertisement then maybe we should just try with a free demo and a paid full product.
 
-Adds force us inherently to make room for them in our UI. Either we will squeeze some space or we will allow ad banners to overlap our interface. Users might click an ad by mistake in such case -- more income for us? or maybe not? if users will get angry, they can spread word quickly about a game.
+Free versions dont have to be limited in any way - game wise, they can just use worse resources (low res quality images / sound files). Many small titles have a normal and HD version on the market.
 
-Also don't overdo with the amount of banners! Games often have fragile artistic visions which are easily broken with colorful ads. How would you like to look at bright colorful images on a banner in a dark noir game?
+There are cases where a demo version is sometimes the only way to go for our game. Ad banners might often not fit into game UI or there is not enough additional content to offer in our `IAP` service.
+
+Don't draw conclusions that ads make things easier. They force us inherently to make room for them in our UI. Either we will squeeze some space or we will allow ad banners to overlap our interface. Users might click an ad by mistake? In such case -- more income for us? or maybe not? angry users spread bad publicity very quickly.
+
+Also don't overdo with the amount of ad banners! Games often have fragile artistic visions that are easily broken with colorful ads (which you do not have any influence over). How would you like to look at bright colorful ad images in a dark noir game?
 
 So, once you know where to place an ad then how can you earn on them? There are some acronyms that you will often read: CPC and CPM.
 
@@ -145,3 +149,5 @@ The most important thing of all you will need is time. Before you will finish an
 So what's next? You need to learn and explore a lot. Read about other games, what technologies they used and how they were designed. Game design is a broad topic, there are alot of phenomenal literature out there that is covering this topic. A good starting book would be: "Rules of Play - Game Design Fundamentals" by Katie Salen and Erric Zimmerman.
 
 And of course Good Luck!
+
+[^1]: Monetization is well known term, used way before the context of gaming.

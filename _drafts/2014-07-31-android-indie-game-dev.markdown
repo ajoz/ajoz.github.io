@@ -25,7 +25,7 @@ Well known game generes from pc or console often won't end as a success on mobil
 
 ### How?
 
-`Monetization` is a term that is spreading with a lightning speed. It describes ways of earning profit on a given product (it doesn't necessary need to be a game[^1]). Depending on the game you need to decide the form of monetizing the content you'll be delivering. Currently there are few options available:
+`Monetization` is a term that is spreading with a lightning speed. It describes ways of earning profit on a given product (it doesn't necessary need to be a game). Depending on the game you need to decide the form of monetizing the content you'll be delivering. Currently there are few options available:
 
 1. **Sell** - for example on [`Google Play`](https://play.google.com/), [`Amazon Appstore`](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) or [`GetJar`](http://www.getjar.com/). Depending on the contract with the shop you will get a percentage from the sold game. They are giving you the platform, this is why you give them some compensation.
 2. **Ads** - in different forms: as banners inside the app, as notification bar adds, as popup windows. There are many solutions for example `Google AdMob` or `MobClix`. They will pay you either for displayed adverts or for each one clicked.
@@ -35,37 +35,29 @@ Well known game generes from pc or console often won't end as a success on mobil
 
 ### Where?
 
-Second thing is to pick a place you will sell your game in, but beware there are around 30 different Android app markets available. Several of possible markets are only available in certain world regions like `North America` or `Asia`.:
+You need to be aware there are around 30 different Android app markets available. Several of those possible markets are only available in small amount of countries or world regions like `North America` or `Asia`.
 
 1. **Google Play** - https://play.google.com/ - Its the default app market for the majority of android devices. If you do not have any previous experience with selling apps on Android, I advise you to start with this one first.
-2. **Amazon Appstore** - http://www.amazon.com/ - A well known alternative for `Google Play`, by default installed on Amazon Kindle Fire. Unfortunately its availability is limited to `USA` (it may change one day but keep this in mind). Each day one paid app is picked and released for free for a single day  (don't worry developers are compensated for this).
-3. **GetJar** - http://getjar.com/ - Its advertised as a second largest app market in the world. It might be true due to the fact its available also on platforms other then Android. Most commonly installed on devices which do not have access to official Google Play market like low end / budget phones and tablets. Angry Birds from Rovio was first on GetJar before it came to Google Play.
+2. **Amazon Appstore For Android** - http://www.amazon.com/ - A well known alternative for `Google Play`, by default installed on Amazon Kindle Fire. Unfortunately its availability is limited to `USA` (it's worth to check as it may change one day). Amazon offers an interesting crosspromotion for apps and market. Each day one paid app is picked and released for free for a single day (don't worry developers are compensated for this).
+3. **GetJar** - http://getjar.com/ - Its advertised as a second largest app market in the world. It might be true due to the fact its available also on platforms other then Android. Most commonly installed on devices which do not have access to official Google Play market like low end budget phones and tablets. Angry Birds from Rovio was first release on GetJar before it took Google Play by storm.
 4. **SlideME** - http://slideme.org/ - Its advertised as a "better" alternative to Google Play. For starters it takes a lower share for selling your app. It has some nice user oriented features like getting apps through a web browser in addition to a market app installed on the device.
 
 ### What to pick?
 
-We now know how and where to sell, but what model should we pick? If we already have finished our game and we can count on a good advertisement then maybe we should just try with a free demo and a paid full product.
+We now know how and where to sell, but what model should we pick? If we already have finished our game and we can count on a good advertisement then maybe we should just try with a free demo and a paid full product. Free versions dont have to be limited in any way - game wise, they can just use worse resources (low res quality images / sound files). Many small games have a normal and HD version on the market. Most often normal version is free and HD version can be bought for few dollars.
 
-Free versions dont have to be limited in any way - game wise, they can just use worse resources (low res quality images / sound files). Many small titles have a normal and HD version on the market.
+You can choose to profit from ads that can be displayed in your game. Remember that there might be issues with fitting them into game UI. Either you will squeeze some space or allow ad banners to overlap your interface. "Users might click an ad by mistake?" - you ask In such case -- more income for us? or maybe not? angry users spread bad publicity very quickly so do it on your own risk. Most importantly don't overdo! Games often have fragile artistic style that is easily broken with colorful ads (which you do not have any influence over!). How would you like to look at bright colorful ad images in a dark noir game? You wouldn't, so don't force your users to.
 
-There are cases where a demo version is sometimes the only way to go for our game. Ad banners might often not fit into game UI or there is not enough additional content to offer in our `IAP` service.
+So, once you know where to place an ad then how can you earn on them? There are some acronyms that you will often read about: `CPC` and `CPM`.
 
-Don't draw conclusions that ads make things easier. They force us inherently to make room for them in our UI. Either we will squeeze some space or we will allow ad banners to overlap our interface. Users might click an ad by mistake? In such case -- more income for us? or maybe not? angry users spread bad publicity very quickly.
+1. **CPC** - *Cost Per Click* - in most cases you will only get paid if someone clicks the ad / banner.
+2. **CPM** - *Cost Per Mille* (Cost per thousand views) - the letter `M` is a Roman number meaning a thousand.
 
-Also don't overdo with the amount of ad banners! Games often have fragile artistic visions that are easily broken with colorful ads (which you do not have any influence over). How would you like to look at bright colorful ad images in a dark noir game?
+**Google AdMob** is based on the CPC although determining the amount of money for one click may be rather difficult. Everything depends on the `app type`, `target audience` etc. To better know what kind of money would such solution generate, you can simply integrate it into your game and just check after few weeks or months.
 
-So, once you know where to place an ad then how can you earn on them? There are some acronyms that you will often read: CPC and CPM.
+If you do not want to pollute your artistic vision with ads there are other means of monetization. One of such alternatives are `push notifications`. They seem perfect as you do not have to mess your UI to use them. All ads are displayed as messages / links in the notification area (panel) of a smartphone. My humble word of warning: **they have a really really really BAD opinion** and can drag your app down :-( I think that the first company which introduced this type of monetization was `AirPush`. They claim to have 800k active users, it's a really impressive number but remember that this kind of an ad is often confusing for an average user. Users don't know what is causing a notification to pop up and treat it as a sign of malware. Security companies list oppressive notifications as the second biggest problem right after malware (sic!).
 
-1. **CPC** - *Cost Per Click* - in most cases we will only get paid if someone clicks the ad / banner
-2. **CPM** - *Cost Per Mille* (Cost per thousand views) - the letter `M` is a Roman number meaning a thousand
-
-**Google AdMob** is based on the CPC although determining the amount of money for one click may be difficult, it depends on *app type*, *target audience* etc. To better know what kind of money would such solution generate, you can simply integrate it into your game and just check after few weeks.
-
-If we do not want to pollute our artistic vision with ads we have other means of monetization. One of such alternative options are **push notifications**. They seem perfect as we do not have to mess our UI to use them. All ads are displayed as messages / links in the notification area (panel) of a smartphone. My humble word of warning: **they have a really really really BAD opinion** and can drag your app down :-(
-
-I think that the first company which introduced this type of monetization was **AirPush**. They say they have 800k active users, it's a really impressive number but remember that this kind of an ad is often confusing for an average user. Users often don't know what is causing a notification to pop up and treat it as a sign of malware (Security companies list oppressive notifications as the second biggest problem right after malware).
-
-App called **APNDriod** was removed from Google Play after a lot of user reports, the main reason was excessive amount of notifications. True or not, you need to remember that with Android 4.2 users can now block notifications for a chosen app!
+App called `APNDriod` was removed from Google Play after lots of user reports. Most were complaining about excessive amount of notifications. True or not, you need to remember that with Android 4.2 users can now block notifications for a chosen app!
 
 Whichever type of ads you pick remember to have it from day one, you don't want to surprise your users later on in your app life cycle. Adding monetization after some time might cause a loss of players.
 
@@ -149,5 +141,3 @@ The most important thing of all you will need is time. Before you will finish an
 So what's next? You need to learn and explore a lot. Read about other games, what technologies they used and how they were designed. Game design is a broad topic, there are alot of phenomenal literature out there that is covering this topic. A good starting book would be: "Rules of Play - Game Design Fundamentals" by Katie Salen and Erric Zimmerman.
 
 And of course Good Luck!
-
-[^1]: Monetization is well known term, used way before the context of gaming.

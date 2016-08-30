@@ -1,8 +1,8 @@
 ---
 layout: post
 date: 25-06-2014
-title: Is TTD dead?
-tags: TTD java testing
+title: Is TDD dead?
+tags: TDD java testing unit-test unit
 disqus: true
 ---
 

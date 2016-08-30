@@ -16,7 +16,7 @@ Assert that session contains command mute
 }
 ```
 
-It reads fenomenally and quickly shows the intentions of the author of this test. Of course in `Java` it would look like:
+It reads phenomenally and quickly shows the intentions of the author of this test. Of course in `Java` it would look like:
 
 ```java
 {

@@ -6,7 +6,16 @@ title: Confitura 2016 afterthoughts
 tags: confitura conference java scala
 disqus: true
 ---
-###  Jak dotrwac do emerytury
+
+Although I haven't done a Confitura 2015 afterthoughts article I won't miss my chance to share my impressions after this years edition. A small reminder for all who are new here or not particularly working with Java. Confitura is an yearly event organized by Warsaw JUG. Organizers describe it as a `Java conference for Polish Java community`. It's mainly focused on enterprise Java but you can find some pure JVM, Android, soft skills related talks. I never thought that going there was a wasted time.
+
+### C4 - lekkie podejście do dokumentowania architektury - Sławomir Sobótka
+
+### Building common libraries that aren't garbage - Piotr Betkier
+
+### Kotlin, why? - Paweł Byszewski
+
+###  Jak dotrwac w informatyce do emerytury - Joanna Karczewska
 
 Plan B, Oszczednosci, Zdrowie i ciagla praktyka
 

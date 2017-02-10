@@ -2,14 +2,14 @@
 layout: post
 date: 07-07-2016
 author: Andrzej Jóźwiak
-title: Adventures in implementing "for" loop
+title: Adventures in implementing a "for" loop in Scala
 tags: fp functional scala java jvm
 disqus: true
 ---
 
-I was reading "Seven Languages in Seven Weeks" from the "The Pragmatic Bookshelf"  series by Bruce A. Tate when I found chapter about Scala. The language is nothing new to me, I'm even trying to sharpen my understanding of functional programming concepts by reimplementing Scala features in Scala / Java. What peeked my interest was an example of a simple for loop. I couldn't continue reading as my thoughts rushed and I begun to think how it is implemented internally.
+I was reading "Seven Languages in Seven Weeks" from the "The Pragmatic Bookshelf" series by Bruce A. Tate when I found chapter about Scala. What peeked my interest was an example of a simple and harmless `for` loop. I just couldn't continue reading as my thoughts rushed and I begun to think how it is implemented internally. Is `for` a higher-order function? Is `<-` an infix function that works like an operator? Is `until` an extension for type Int? Let's try to answer those questions.
 
-A simple for-loop example:
+Before we start let's look at this "groundbreaking" (at least for me) for-loop example:
 
 ```scala
 for(i <- 0 until args.length) {
@@ -17,7 +17,7 @@ for(i <- 0 until args.length) {
 }
 ```
 
-I started to think about such notation in terms of what is a higher order function and what are simple arguments, operators maybe. From my small knowledge of Scala capabilities I know that some of the available operators are just functions (methods) in given types (classes). So my first thought about above example was to write it more expressively:
+I started from thinking about the notation, is `for` just a function? What type of argument does it accept? I knew already that what other languages call operators, in Scala are just plain functions (methods) of given types (classes). For anyone with only a Java background this can be strange, but `1 + 2` is just `1.+(2)`. This [infix notation](http://docs.scala-lang.org/style/method-invocation.html) allows to remove a lot of clutter from the code. So without a Scala REPL or a compiler I visualized how it might look like with a "dot" notation:
 
 ```scala
 for(i.<-(0.until(args.length))) {
@@ -25,7 +25,7 @@ for(i.<-(0.until(args.length))) {
 }
 ```
 
-I'm used to thinking about operators like `+` or `-` in terms of methods in Scala so I thought the same was valid for `<-`. I've begin to think how would such a function work and how on bloody earth I would be able to iterate with this magical `i` So I've begun looking for it. I thought the easiest way is to look into Scala code on github and just check this `<-` operator implementation. I imagined it to look like:
+If it is working for `+` or `-` than it surely has to work for `<-`, right? I've begin to think how would such a function work and how on bloody earth I would be able to iterate with this magical `i`. I thought that the easiest way is to look into Scala code on github and just check this `<-` operator implementation. I imagined it to be something like:
 
 ```scala
 def <-(x: Range): ??

@@ -2,7 +2,7 @@
 layout: post
 date: 30-08-2016
 author: Andrzej Jóźwiak
-title: Parametrized JUnit: @Theory and practice
+title: Parametrized JUnit - Theory and practice
 tags: junit unit-testing testing java jvm
 disqus: true
 ---

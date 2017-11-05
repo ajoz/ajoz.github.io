@@ -1,32 +1,31 @@
 # Theme customization - please change from the defaults!
 
-# Color for top bar, links, etc
-highlight_color: '#0070bb'
+# Color for fa-icons, links, etc
+highlight_color: '#3498db'
 
-# Disqus configuration (provide short name)
+# Disqus configuration (provide short name - disabled if not provided)
 disqus_shortname: ajoz
 
 # Profile links on the left sidebar, leave blank to ignore
 social:
   github: ajoz
   bitbucket: ajoz
-  #hacker_news:
+  #hacker_news: ajoz
   #stackexchange:
   #stackoverflow: 348619
-  #twitter:
-  #facebook:
-  #tumblr:
-  #linkedin:
+  twitter: _ajoz_
+  #facebook: ajoz
+  #tumblr: ajoz
+  #linkedin: andrzejjozwiak
   #gplus:
-  #gravatar:
-  #flickr:
+  #flickr: 
 
-# Author (name and surname of the site author, used in the section Hi, I'm ...)
+# Author (name and surname of the site author, used in the header section)
 author: Andrzej Jóźwiak
 # Description of the site
 description: My blog about programming, software engineering and my hobbies
 # Keywords (although its not used by google its used by some search engines)
-keywords: programming, java, scala, functional programming
+keywords: programming, java, scala, kotlin, jvm, functional programming
 # Charset
 charset: utf-8
 
@@ -34,13 +33,13 @@ charset: utf-8
 email: test@example.com
 
 # Text shown on the sidebar below the logo
-tagline: "For every complex problem there is an answer that is clear simple and wrong!"
+tagline: "For every complex problem there is an answer that is clear, simple and wrong!"
 
 # Date shown in the footer of the posts
-copywrite: 2016
+copywrite: 2017
 
-# Google Analytics key, leave blank to ignore
-google_analytics_key: UA-xxxx-x
+# Google Analytics key e.g.: UA-xxxx-x, leave blank to ignore 
+google_analytics_key:
 
 # Toggle "Postings are my own" disclaimer in footer
 show_disclaimer: true

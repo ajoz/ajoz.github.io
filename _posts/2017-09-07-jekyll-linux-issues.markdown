@@ -2,18 +2,22 @@
 layout: post
 date: 07-09-2017
 author: Andrzej Jóźwiak
-title: Another adventure with Jekyll - Linux installation
+title: Another adventure with Jekyll - Linux edition
 tags: linux jekyll
 disqus: true
 ---
 
-Start with update:
+Recently I had some changes on my machine: disk, memory, system. Especially the last thing ment I needed to install Jekyll again. I said to myself "nothing to worry it's not 2007 - it will go smoothly", and it was smooth but only at the begining.
+
+Everything here is written from a perspective of Ubuntu 17.10, if you use a different distro some of the information might still help you.
+
+I need to start with package list update:
 
 ```
 $ sudo apt-get update
 ```
 
-Check if you have ruby 2.X.X installed, if not install it.
+Then check if correct ruby version is installed (correct = 2.x.x):
 
 ```
 $ ruby --version
@@ -21,7 +25,7 @@ The program 'ruby' is currently not installed. You can install it by typing:
 sudo apt install ruby
 ```
 
-We need to install few things:
+No ruby yet? Even better, the installation is simple, As I need ruby, gems and some infrastructure to build them, this should do the trick:
 
 ```
 $ sudo apt-get install ruby ruby-dev make gcc
@@ -29,7 +33,7 @@ Reading package lists... Done
 Building dependency tree
 ```
 
-Now we can install jekyll:
+Instaling Jekyll should now be a breeze:
 
 ```
 $ sudo gem install jekyll bundler
@@ -50,7 +54,7 @@ Done installing documentation for bundler after 4 seconds
 20 gems installed
 ```
 
-Finally we can run jekyll:
+Everything fine and dandy, now just a quick, simple test:
 
 ```
 $ jekyll help
@@ -69,7 +73,7 @@ $ jekyll help
 	from /usr/local/bin/jekyll:22:in `<main>'
 ```
 
-We can use bundle and update needed gems:
+Ok, ok, ok still nothing to worry about, I just need to update blog gems with bundler and this will be it (at least I hope so):
 
 ```
 $ sudo bundle update
@@ -180,9 +184,7 @@ In Gemfile:
         nokogiri
 ```
 
-Ooops still a problem let's see /var/lib/gems/2.3.0/extensions/x86_64-linux/2.3.0/nokogiri-1.8.0/mkmf.log
-
-Ok let's install (reinstall) zlib:
+I don't like where this is going, but let's check this mysterious file: `/var/lib/gems/2.3.0/extensions/x86_64-linux/2.3.0/nokogiri-1.8.0/mkmf.log`. From the information contained there it seems I need to reinstall `zlib`. This should be simple enough:
 
 ```
 $ sudo apt-get install --reinstall zlibc zlib1g zlib1g-dev
@@ -192,7 +194,7 @@ Setting up zlibc (0.9k-4.3) ...
 Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-0ubuntu1) ...
 ```
 
-Again let's use bundle:
+After successful `zlib` install, I kept my fingers crossed and tried to update gems for my blog again with bundler:
 
 ```
 $ sudo bundle update
@@ -215,7 +217,7 @@ https://github.com/jch/html-pipeline#dependencies
 -------------------------------------------------
 ```
 
-Wow, maybe now?
+Update finished with a success. I'm sure now everything works:
 
 ```
 $ jekyll help
@@ -235,22 +237,20 @@ Please report a bug if this causes problems.
 	from /usr/local/bin/jekyll:22:in `<main>'
 ```
 
-What to do now?
-
-We can do what the error suggested and just run:
+After so many fails this was not a real surprise, so what to do now? I can read the nice tip in the error message and just use `bundle exec` to run `jekyll`, like this:
 
 ```
 $ bundle exec jekyll help
 ```
 
-And this works or we can check our Gemfile.lock and think what we can do? Maybe we need to fix Gemfile also, let's check github-pages instructions [here](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/). It seems that first I need to update my Gemfile to something like this:
+This is super efective, yet very long. I had a silly thought that maybe, just maybe editing `Gemfile.lock` is a good idea and it will help. Fortunately I also had an idea to maybe update `Gemfile` first. Maybe before I start hacking everything to pieces I should go to the begining and check what Github says about it. You can find github help article [here](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) but everything boiled down to updating my `Gemfile` with:
 
 ```
 source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 ```
 
-Ok so let's run bundle again:
+After some time with bundler I know the drill:
 
 ```
 $ bundle update
@@ -264,33 +264,33 @@ Installing github-pages 160 (was 29)
 Bundle updated!
 ```
 
-Some our plugins where updated and we got new. Let's check:
-
-```
-$ bundle exec jekyll help
-```
-
-Runs ok
-
-```
-$ jekyll help
-```
-
-Fails :( I have several versions of the same gem installed. What to do?
-
-We have now few choices. We can run jekyll with `bundle exec` this would mean running it like:
+From the logs I see that some of my plugins where updated. I started doubting if this was really such a good idea, I check if blog still looks the same:
 
 ```
 $ bundle exec jekyll serve
 ```
 
-This way our jekyll instance will get run with the gems listed in Gemfile.lock. Still its quite a long command. We can shorten it up a little and create a shell alias (ofc if you are using a shell that supports it). If your using Bash you can add a single line to your `.bashrc` file:
+Runs ok, looks ok. Let's get back to my main problem: Can I run jekyll without `bundle exec`?
+
+```
+$ jekyll help
+```
+
+Fails :( I have several versions of the same gem installed. What to do now? As the option of crying is always available I can:
+
+* use the dreaded `bundle exec` each time I want to run jekyll
+* create a bash alias for `bundle exec jekyll` to cheat a bit
+* uninstall wrong gems
+
+Bundler is not that bad, using it has some nice benefits. Our jekyll instance will be run with the gems listed in Gemfile.lock. Still its quite a long command, even longer if you often add `--draft` option. We can shorten it up a little and create a shell alias (ofc if you are using a shell that supports it). If your using Bash you can add a single line to your `.bashrc` file:
 
 ```bash
 alias jekyll='bundle exec jekyll'
 ```
 
-This way you will be able to call `jekyll` without additional hassle. There is a third option, if your not a ruby developer and you only need it to configure and run jekyll, then you can check which versions of conflicting gems you have and just install (keep) the correct ones.
+This way you will be able to call `jekyll` without additional hassle.
+
+Third and last option is uninstalling, If you're not a Ruby developer and you only need it to configure and run jekyll, then you can check which versions of conflicting gems you have and just install (keep) the correct ones.
 
 ```
 $ sudo gem uninstall public_suffix
@@ -304,13 +304,11 @@ Select gem to uninstall:
 Successfully uninstalled public_suffix-3.0.0
 ```
 
-After uninstalling public_suffix-3.0.0 I had the same issue with kramdown:
+In my case after uninstalling `public_suffix-3.0.0` I had the same issue with **kramdown**:
 
 ```
 You have already activated kramdown 1.14.0, but your Gemfile requires kramdown 1.13.2.
-```
 
-```
 $ sudo gem uninstall kramdown
 
 Select gem to uninstall:

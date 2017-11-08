@@ -108,7 +108,7 @@ gem install pygments.rb --version "=0.5.0"
 
 In the command above I'm installing version 0.5.0 but any 0.5.x should be good.
 
-Unfortunately after that change `jekyll server` command still was ending with an error. After digging a bit I found out its the Python version causing the problems. I had Python from 3.x line and for `jekyll` you need 2.7.x line. So one download, reinstall, path change later I was ready to go and generate my test blog.
+Unfortunately after that change `jekyll server` command still was finishing with an error. After digging a bit I found out its the Python version causing the problems. I had Python from 3.x line and for `jekyll` you need 2.7.x line. So one download, reinstall, path change later I was ready to go and generated my test blog.
 
 ```
 E:\Projekty\blog-test>jekyll server
@@ -122,4 +122,4 @@ Configuration file: E:/Projekty/blog-test/_config.yml
   Server running... press ctrl-c to stop.
 ```
 
-I hope this helps you with starting working with Jekyll on Windows.
+I hope this helps you!

@@ -7,7 +7,7 @@ tags: confitura conference java scala
 disqus: true
 ---
 
-Some of you might not know but there are few free software conferences in Poland. By `free` I mean you don't need to pay for a ticket. One of them is organized in Warsaw: [Confitura](http://confitura.pl). Its a `java`/`jvm` related conference that's getting bigger and bigger with every year. And as you might imagine I went there as usual to check what's new in Java world. I also went there with hopes of seeing some presentations about Android / Mobile but unfortunately there were none. I guess enterprise java is the most dominant.
+Some of you might not know but there are few free software conferences in Poland. By `free` I mean you don't need to pay for a ticket. One of them is organized in Warsaw: [Confitura](http://confitura.pl). It's a `java`/`jvm` related conference that's getting bigger and bigger with every year. And as you might imagine I went there as usual to check what's new in Java world. I also went there with hopes of seeing some presentations about Android / Mobile but unfortunately there were none. I guess enterprise java is the most dominant.
 
 As usual the conference was held inside the campus of Warsaw University. Its 3rd time Confitura is there, big rooms that can accommodate quite a large number of participants + air conditioning which is very crucial in the summer.
 

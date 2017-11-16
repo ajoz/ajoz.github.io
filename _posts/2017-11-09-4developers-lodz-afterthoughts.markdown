@@ -18,7 +18,7 @@ It was the first talk of the conference I picked and I must say that I did it wi
 Just from the title you can easily guess it was a rant of a sort ;-) A rant indeed but a well deserved one. Jarek was showing common issues with "enterprise" code related to annotations, to name a few:
 
 * `@Autowired` annotation leading to a globale state
-* How dependant (pun intended) we became on the dependancy injection frameworks
+* How dependant (pun intended) we became on the dependancy injection frameworks. Jarek mentioned an article by Oliver Gierke ["Why field injection is evil?"](http://olivergierke.de/2013/11/why-field-injection-is-evil/) - definitely a valuable read!
 * How belowed Java `new` keyword became an issue
 * How much "magic" is there under the hood of EJB and why you cannot use threads there
 
@@ -56,12 +56,13 @@ I'm hearing about how "microservices" are the savior of enterprise software for 
 * even moving a simple feature might be hard - services can differ in architecture, programming language, database used, overall infrastructure and especially API they are exposing to their clients
 * monolith is not evil it has its uses
 * monolith can have polyglot persistance
+* each microservice has a test pyramid
 
-Was very nice to hear how things are done in a large company. What impressed me the most was 100 deployments per day.
+Was very nice to hear how things are done in a large company. What impressed me the most was 100 deployments per day. Tomek also mentioned that a lot of the teams are working on the infrastructure instead of business logic.
 
 ### Modern Agile Retrospectives - Piotr Stawirej
 
-After all those technical talks I wanted to chill a bit. Agile track was my choice and it was a good choice I tell you.
+After all those technical talks I wanted to chill a bit. Agile track was my choice and it was a good choice I tell you. Later on I learned this presentation one of 3 best presentations on the conference so I was really lucky to attend it.
 
 Piotr was talking about common Scrum "implementations" in companies and how most often they transform into cargo cults. People doing daily standups, retrospectives without understanding what they are all about.
 
@@ -76,8 +77,10 @@ Talk was about retrospectives alone, Piotr had a lot of good advices for Scrum m
 Retrospective should be used to gather data and generate insight.
 
 I really liked this talk, a lot of new concepts for me like:
-* types of retrospecitve participants: Explorer, Shopper, Vacationer, Prisoner
-* Smart Goals after retrospecive: Specific, Measurable, Achievable, Realistic, Timely
+* there are different types of retrospecitve participants: Explorer, Shopper, Vacationer, Prisoner - scrum master should indetify them and act accordingly
+* Smart Goals after retrospecive: Specific, Measurable, Achievable, Realistic, Timely - should define what the team wants to achieve, depending on the team size there shouldn't be more then 5 (someone in the audience said that not more then even 3)
+* retrospective closing activities - if we have opening activities why not closing activities?
+* use system of plus / delta to gather feedback from the participants, delta instead of minuses so we force people to not only explain what they don't like but also what whould they change
 
 ### Sagi, strumienie, reaktywność i inne buzzwordy - Jarosław Pałka
 
@@ -85,4 +88,4 @@ This was my last talk for the day and I had a problem who should I choose. On on
 
 ### Final thoughts
 
-Although nothing remotely Android related I still had fun. I hope there will be another edition in Łódź. Also a note to myself I need to attend more Agile related talks like the one given by Piotr Stawirej a perfect mix of entertainment and education.
+Although nothing remotely Android related I still had fun. I hope there will be another edition in Łódź. Also a note to myself I need to attend more Agile related talks like the one given by Piotr Stawirej a perfect mix of entertainment and education. See you all on the next 4Developers Łódź!

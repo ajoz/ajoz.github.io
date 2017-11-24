@@ -101,11 +101,21 @@ I have only small experience with streams (mostly RxJava), in most cases they we
 
 ### Session 5 - TDD As If You Meant It!
 
-This session was all about TDD, we were supposed to write the tests first. Writing a Cell class would be considered cheating in this excercise. Why? Simply because everything should be extracted from the test instead of written before. We want our tests to be a contract for our code, we do not know yet how this code will look like because TDD is supposed to give it the "correct" form.
+This session was all about TDD, we were supposed to write the tests first. Writing a `Cell` class would be considered cheating in this excercise. Why? Simply because everything should be extracted from the test instead of written before. We want our tests to be a contract for our code, we do not know yet how this code will look like because TDD is supposed to give it the "correct" form.
 
-How to apply this to our "Game"? Let's start with simple things like: *"if there are no alive cells then no cells can be born"*. Do we need anything to write this test? No! We do not need to create a `Cell` class we can even use a `Boolean` to express it. What about coordinates? What coordinates!? Our test doesn't say anything about any position at all so we don't need it. It's important to focus on defining the contract.
+How to apply this to our "Game"? Let's start with simple things like: *"if there are no alive cells then no cells can be born"*.
 
-When to extract? Whenever you will see some duplication. By duplication I mean when the same idea is repeated not the same code (there is a difference). Now this is the tricky part how to spot such duplication? A simple example:
+Do we need anything to write this test?
+
+No! We do **NOT** need to create a `Cell` class! We can use a `Boolean` to represent it. `Boolean` is especially useful as we get dead and alive cells for free - but it's not imporant now!
+
+What about coordinates?
+
+What coordinates!? Our test doesn't say anything about any position at all so we don't need any. It's important to focus on defining the contract first.
+
+So we created few passing tests then when to extract?
+
+Whenever you will see some duplication. By duplication I mean when the same idea is repeated not the same code (there is a big difference). Now this is the tricky part how to spot such duplication? A simple example:
 
 * *"if there are no alive cells then no cells can be born"*
 * *"if there is only one alive cell then no cells will born or survive"*
@@ -117,6 +127,7 @@ There is a vague duplication of an idea. Idea of changing a set of cells to anot
 * best session of the day!
 * it's easy to do extraction to early
 * it's easy to do extraction to late
+* real TDD is hard, really really hard and needs a lot of strong will
 
 ### Final thoughts
 

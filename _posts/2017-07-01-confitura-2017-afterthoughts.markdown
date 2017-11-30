@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 01-07-2014
+date: 01-07-2017
 author: Andrzej Jóźwiak
 title: Confitura 2017 afterthoughts
 tags: confitura conference java scala jvm

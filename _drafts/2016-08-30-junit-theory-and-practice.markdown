@@ -3,11 +3,9 @@ layout: post
 date: 30-08-2016
 author: Andrzej Jóźwiak
 title: Parametrized JUnit - Theory and practice
-tags: junit unit-testing testing java jvm
+tags: junit unit-testing java jvm
 disqus: true
 ---
-
-I'm very sorry for this obvious pun in the title but I just couldn't help myself.
 
 Maybe it's not a very polite thing but I would like to start with a small rant. I've read a lot of different articles about unit testing in `java` and all of them agreed on few simple rules:
 - you should always test smallest things possible - so called `unit's`

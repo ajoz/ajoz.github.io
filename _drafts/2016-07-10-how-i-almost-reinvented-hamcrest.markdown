@@ -7,7 +7,7 @@ tags: java hamcrest junit
 disqus: true
 ---
 
-I started using Scala and I got really spoiled with it. Both language wise and test wise. I always wanted to read my code and test like sentences like real human language. Language without all those brackets, dots, parenthesis etc.
+I started using Scala and I got really spoiled with it. Both language wise and test wise. I always wanted to read my code and tests like sentences like real human language. Language without all those brackets, dots, parenthesis etc.
 
 Lets say you have a unit test code and you write in it:
 ```

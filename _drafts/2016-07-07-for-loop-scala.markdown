@@ -101,7 +101,7 @@ Looking at the code it's easy to deduce that `by` is a method of [Range](https:/
  *  @return a new range with a different step
  */
 def by(step: Int): Range = copy(start, end, step)
-```http://scala-lang.org/files/archive/spec/2.11/
+```
 
 Ok to piece what we have so far. In the original code example:
 
@@ -125,4 +125,11 @@ Generator      ::=  Pattern1 `<-' Expr {[semi] Guard | semi Pattern1 `=' Expr}
 Guard          ::=  `if' PostfixExpr
 ```
 
-Finally we found our mysterious `<-` operator, it separates pattern from a an expression
+Finally mysterious `<-` operator is found, still this needs a bit of deciphering. Scala syntax is described with [Extended BNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form) and even without expert knowledge of BNF it's possible to understand that:
+- `for` is an expression that can have two forms
+  - with parentheses `for( ... )`
+  - with braces ` for { ... }`
+- in both of these forms `Enumerators` sequence always starts with a `Generator`, optionally followed by further generators
+- each `Generator` is composed from a pattern matching (written as `Pattern1 <- Expr`) and a series of optional `Guards` and value definitions.
+
+This explains the syntax but how does it work?

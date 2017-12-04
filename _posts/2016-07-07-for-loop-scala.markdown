@@ -63,7 +63,7 @@ for(i <- 0 until 100 by 3; if somecondition; j <- 0 until 100 by 3) {
     // something done here
 }
 ```
-Such powerfull example made me think that `<-` is really not an operator one can implement. Which in turn explained why I couldn't find its implementation in `Int` or `RichInt`. This also justifies that I skipped thinking about that dreaded `i`. It's the end of the road, a look into [docs](http://docs.scala-lang.org/tutorials/FAQ/finding-symbols.html) is necessary.
+Such powerfull example made me think that `<-` is really not an operator one can implement. Which in turn explained why I couldn't find its implementation in `Int` or `RichInt`. It's the end of the road, a look into [docs](http://docs.scala-lang.org/tutorials/FAQ/finding-symbols.html) is necessary.
 
 All operators in Scala can be divided into four categories:
 - reserved symbols (keywords) - those are not implemented as methods of any type and cannot be used as names
@@ -71,7 +71,7 @@ All operators in Scala can be divided into four categories:
 - methods that a type has access to thanks to implicit conversion
 - syntactic sugar
 
-From The mysterious `<-` is a special keyword, that cannot be used outside of `for`. The plot thickens!
+The mysterious `<-` is a special keyword, that cannot be used outside of `for`. The plot thickens!
 
 What about `until` and `by`? This one is simple. Method `until` can be found in [RichInt](https://github.com/scala/scala/blob/2.12.x/src/library/scala/runtime/RichInt.scala):
 
@@ -125,11 +125,69 @@ Generator      ::=  Pattern1 `<-' Expr {[semi] Guard | semi Pattern1 `=' Expr}
 Guard          ::=  `if' PostfixExpr
 ```
 
-Finally mysterious `<-` operator is found, still this needs a bit of deciphering. Scala syntax is described with [Extended BNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form) and even without expert knowledge of BNF it's possible to understand that:
+Finally mysterious `<-` operator is found, still this needs a bit of deciphering. Scala syntax is defined with [Extended BNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form) and even without expert knowledge of BNF it's possible to understand that:
 - `for` is an expression that can have two forms
   - with parentheses `for( ... )`
-  - with braces ` for { ... }`
+  - with braces `for { ... }`
 - in both of these forms `Enumerators` sequence always starts with a `Generator`, optionally followed by further generators
 - each `Generator` is composed from a pattern matching (written as `Pattern1 <- Expr`) and a series of optional `Guards` and value definitions.
 
-This explains the syntax but how does it work?
+This explains the syntax but how does it work? As always documentation comes to the rescue:
+
+> The precise meaning of generators and guards is defined by translation to invocations of four methods: map, withFilter, flatMap, and foreach. These methods can be implemented in different ways for different carrier types.
+
+I can confirm this with some decompiler magic. I used `javap -v -p` to get verbose output and some detailed information about all classes and members.
+
+```
+10: aload_1
+11: arraylength
+12: invokevirtual #35                 // Method scala/runtime/RichInt$.until$extension0:(II)Lscala/collection/immutable/Range;
+15: aload_1
+16: invokedynamic #57,  0             // InvokeDynamic #0:apply$mcVI$sp:([C)Lscala/runtime/java8/JFunction1$mcVI$sp;
+21: invokevirtual #63                 // Method scala/collection/immutable/Range.foreach$mVc$sp:(Lscala/Function1;)V
+24: return
+```
+
+Once again documentation was correct -- who would have known? I wanted to double check and see how guards are compiled, so I've modified the example a bit:
+
+```scala
+// args is a char array
+for(i <- args; if i == 'a') {
+    println(i)
+}
+```
+
+And the decompiled code:
+
+```
+// the for:
+
+7: aload_1
+8: invokevirtual #31                 // Method scala/Predef$.charArrayOps:([C)[C
+11: invokespecial #34                 // Method scala/collection/mutable/ArrayOps$ofChar."<init>":([C)V
+14: invokedynamic #55,  0             // InvokeDynamic #0:apply:()Lscala/Function1;
+19: invokevirtual #59                 // Method scala/collection/mutable/ArrayOps$ofChar.withFilter:(Lscala/Function1;)Lscala/collection/generic/FilterMonadic;
+22: invokedynamic #64,  0             // InvokeDynamic #1:apply:()Lscala/Function1;
+27: invokeinterface #70,  2           // InterfaceMethod scala/collection/generic/FilterMonadic.foreach:(Lscala/Function1;)V
+32: return
+
+// the guard (if == 'a'):
+
+0: iload_0
+1: bipush        97 // 'a'
+3: if_icmpne     10
+6: iconst_1
+7: goto          11
+10: iconst_0
+11: ireturn
+```
+
+The defined guard was changed into a `withFilter` method invocation. Documentation was right yet again, darn it! The second example can be written as:
+
+```scala
+args
+  .withFilter(i => i == 'a')
+    .foreach(i => println(i))
+```
+
+WoW! I need to say that this exceeded my wildest expectations. Comming from a Java background I never knew such powerfull and concise tool. It seems that it's worth to get your hands dirty with a decompiler sometimes. 

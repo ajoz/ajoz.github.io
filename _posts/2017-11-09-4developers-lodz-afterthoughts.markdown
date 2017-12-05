@@ -83,11 +83,11 @@ I really liked this talk, a lot of new concepts for me like:
 * use system of `plus/delta` to gather feedback from the participants, `delta` instead of `minuses` to force people to explain what they don't like and what whould they change
 
 I learned that the basic outline of a retrospective:
-1) Setting the stage - it's the time to welcome everyone, reiterate team goals, review all the working agreements
-2) Gather data - on a timeline of previous release / sprint a satisfaction line is drawn for each team member. The satisfaction line goes up or down due to "memorable, personally meaningful, significant events". It also worth to group people who work closely together to check how the satisfaction of those people compare.
-3) Generate insight - this is the moment to discuss the satisfaction line
-4) Decide What to Do - team should define SMART Goals
-5) Close - `plus/delta` 
+* Setting the stage - it's the time to welcome everyone, reiterate team goals, review all the working agreements
+* Gather data - on a timeline of previous release / sprint a satisfaction line is drawn for each team member. The satisfaction line goes up or down due to "memorable, personally meaningful, significant events". It also worth to group people who work closely together to check how the satisfaction of those people compare.
+* Generate insight - this is the moment to discuss the satisfaction line
+* Decide What to Do - team should define SMART Goals
+* Close - `plus/delta`
 
 ### Sagi, strumienie, reaktywność i inne buzzwordy - Jarosław Pałka
 

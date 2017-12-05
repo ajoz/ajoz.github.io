@@ -82,6 +82,13 @@ I really liked this talk, a lot of new concepts for me like:
 * retrospective closing activities - if we have opening activities why not closing activities?
 * use system of `plus/delta` to gather feedback from the participants, `delta` instead of `minuses` to force people to explain what they don't like and what whould they change
 
+I learned that the basic outline of a retrospective:
+1) Setting the stage - it's the time to welcome everyone, reiterate team goals, review all the working agreements
+2) Gather data - on a timeline of previous release / sprint a satisfaction line is drawn for each team member. The satisfaction line goes up or down due to "memorable, personally meaningful, significant events". It also worth to group people who work closely together to check how the satisfaction of those people compare.
+3) Generate insight - this is the moment to discuss the satisfaction line
+4) Decide What to Do - team should define SMART Goals
+5) Close - `plus/delta` 
+
 ### Sagi, strumienie, reaktywność i inne buzzwordy - Jarosław Pałka
 
 This was my last talk of the day and I had a problem who should I choose. On one hand, I had this talk on the other *Getting Things Programmed* by Michał Bartyzel. I already read his book and I felt I have the strength for one more technical talk so I've chosen Jarek. I was not disappointed. It was not technical in the strict sense, it was inspirational. A very nice journey from the definition of a problem, through some nasty fails to a good ending. Everything with a lot of humour.

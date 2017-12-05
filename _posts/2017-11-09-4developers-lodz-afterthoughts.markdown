@@ -7,13 +7,13 @@ tags: 4developers conference java jvm agile
 disqus: true
 ---
 
-After [Mobilization](https://mobilization.pl) is finally finished and wrapped up I have time for other events. I've started my end of the year conference marathon with [4Developers Łódź](https://lodz.4developers.org.pl/). For anyone unfamiliar with this brand it's `backend` / `fronted` related conference with some `agile` sprinkled on top. Although it's not my daily cup of tea I went there to check what new and fun Java things Android will be missing for years ;-) Jokes aside, I like to listen to some web related stuff to learn, get inspired and stretch my brain a little.
+[Mobilization](https://mobilization.pl) is finally finished and wrapped up so I have time for other events. I've started my end of the year conference marathon with [4Developers Łódź](https://lodz.4developers.org.pl/). For anyone unfamiliar with this brand it's `backend` / `fronted` related conference with some `agile` sprinkled on top. Although it's not my daily cup of tea I went there to check what new and fun Java things Android will be missing for years ;-) Jokes aside, I like to listen to some web related stuff to learn, get inspired and stretch my brain a little.
 
 The conference was held inside the campus of Bionanopark on the outskirts of Łódź. This is my city and still, I had some issues with finding the place. The building was nice the rooms also but you could feel it was not meant for larger conferences. Enough complaining!
 
 ### O annotacjach - czas powstrzymać demony - Jarosław Ratajski
 
-It was the first talk of the conference I picked and I must say that I did it without any hesitation. I know Jarek from his talks that he held on [JUG Łódź](https://www.meetup.com/Java-User-Group-Lodz/) and they were imho one of the best we had in years. That said, I knew I was up for a treat.
+It was the first talk I picked and I must say that I did it without any hesitation. I know Jarek from his talks that he held on [JUG Łódź](https://www.meetup.com/Java-User-Group-Lodz/) and they were imho one of the best we had in years. That said, I knew I was up for a treat.
 
 Just from the title, you can easily guess it was a rant of a sort ;-) A rant indeed but a well-deserved one. Jarek was showing common issues with "enterprise" code related to annotations, to name a few:
 
@@ -30,6 +30,11 @@ Other issues in our code mentioned by Jarek:
 
 He finished his talk with a nice example of an app stripped from frameworks like Spring. It was a working example written with Ratpack library. It would be nice to achieve this level of freedom in Android.
 
+Other reading/watching materials suggested by Jarek:
+1. Uncle Bob - [Dependency Injection Inversion](https://sites.google.com/site/unclebobconsultingllc/blogs-by-robert-martin/dependency-injection-inversion)
+2. Mario Fusco - [From GoF to Lambda](https://www.youtube.com/watch?v=FnWntVfEEQg)
+3. Jarek Ratajski - [WEB Pong written in Plain Java](https://github.com/javaFunAgain/ratpong)
+
 ### So, you wanna upgrade to Java 9 - Tomasz Adamczewski
 
 Although we had some really nice announcements this year: Kotlin supported by Google, Jack and Jill death and Java 8 support I was hungry for more. I wanted to know what lies ahead and what new and cool issues it will bring ;-)
@@ -38,17 +43,19 @@ Tomek was showing his experiences with migrating to Java 9. We first started wit
 
 It seems that a single underscore `_` is now restricted, all variable names with only a single underscore won't compile - don't worry double underscores `__` still work ;-)
 
-Tomek was kind enough to explain the pipeline his company is using, and this started a lot of discussions with the audience. Questions were flying back and forth, really nice experience. Also good to know my project is not the only one with flaky tests.
+Tomek was kind enough to explain the pipeline his company is using, and this started a lot of discussions with the audience. Questions were flying back and forth, really nice experience. Also good to know that my project is not the only one with flaky tests.
 
 I learned about existence of:
 * OWASP security testing
 * Consumer-Driven Contract - Spring Cloud Contract
 
-I need to especially check the last one as it seemed interesting.
+I need to especially check the last one as it seemed very interesting. Can it be used in Android development?
 
 ### Micro-monolith anti-pattern - Tomasz Fijałkowski
 
-I'm hearing about how "microservices" are the saviour of enterprise software for quite some time. On most conferences, you can only learn about benefits. So are there no disadvantages to using them? It seems there are and [Allegro](https://allegro.pl/praca) have found some ;-)
+I'm hearing about how "microservices" are the saviour of enterprise software for quite some time. On most conferences, you can only learn about benefits.
+
+So are there no disadvantages to using them? It seems there are and [Allegro](https://allegro.pl/praca) have found some ;-)
 
 * microservices are not the cure for every disease your project might be suffering
 * debugging anything is complicated if a request goes through multiple services - it's not as simple as reading a stacktrace
@@ -77,17 +84,17 @@ The talk was about retrospectives alone, Piotr had a lot of good advice for Scru
 The retrospective should be used to gather data and generate insight.
 
 I really liked this talk, a lot of new concepts for me like:
-* there are different types of retrospective participants: Explorer, Shopper, Vacationer, Prisoner - scrum master should identify them and act accordingly
-* Smart Goals after retrospective: Specific, Measurable, Achievable, Realistic, Timely - should define what the team wants to achieve, depending on the team size there shouldn't be more than 5 (someone in the audience said that not more than even 3)
+* there are different types of retrospective participants: **Explorer**, **Shopper**, **Vacationer**, **Prisoner** - scrum master should identify them and act accordingly
+* Smart Goals after retrospective: **Specific**, **Measurable**, **Achievable**, **Realistic**, **Timely** - should define what the team wants to achieve, depending on the team size there shouldn't be more than 5 (someone in the audience said that not more than even 3)
 * retrospective closing activities - if we have opening activities why not closing activities?
-* use system of `plus/delta` to gather feedback from the participants, `delta` instead of `minuses` to force people to explain what they don't like and what whould they change
+* use system of `plus/delta` to gather feedback from the part. ipants, `delta` instead of `minuses` to force people to explain what they don't like and what whould they chan.
 
 I learned that the basic outline of a retrospective:
-* Setting the stage - it's the time to welcome everyone, reiterate team goals, review all the working agreements
-* Gather data - on a timeline of previous release / sprint a satisfaction line is drawn for each team member. The satisfaction line goes up or down due to "memorable, personally meaningful, significant events". It also worth to group people who work closely together to check how the satisfaction of those people compare.
-* Generate insight - this is the moment to discuss the satisfaction line
-* Decide What to Do - team should define SMART Goals
-* Close - `plus/delta`
+1. **Setting the stage** - it.  the time to welcome everyone, reiterate team goals, review all the working agreements.
+2. **Gather data** - on a tim. ine of previous release / sprint a satisfaction line is drawn for each team member. The satisfaction line goes up or down due to "memorable, person. ly meaningful, significant events". It also worth to group people who work closely together to check how the satisfaction of those people compare.
+3. **Generate insight** - this is the moment to discuss the satisfaction line.
+4. **Decide What to Do** - team should define SMART Goals.
+5. **Close** - `plus/delta` after retrospective.
 
 ### Sagi, strumienie, reaktywność i inne buzzwordy - Jarosław Pałka
 

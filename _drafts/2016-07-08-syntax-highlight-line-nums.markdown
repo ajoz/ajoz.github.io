@@ -2,12 +2,12 @@
 layout: post
 date: 08-07-2016
 author: Andrzej Jóźwiak
-title: Github-pages, Jekyll and syntax highlighting
+title: Jekyll, syntax highlighting and line numbers
 tags: jekyll github-pages markdown
 disqus: true
 ---
 
-After some time I've decided to change the theme on this blog. I used a great theme called brume, I've manually copied the theme to my gh-pages repository and applied all the changes there directly. This approach although fast at first was a bit lacking, I quickly understood I could fork a theme I like, apply needed changes there and use it on my gh-pages branch. I could get all the fixes from the original theme, share my own take on it and keep everything nice, clean and versioned. The only question here was if I want to still use brume?
+After some time I've decided to change the theme on this blog. Up until now I've used a great theme called brume, I've manually copied the theme to my gh-pages repository and applied all the changes there directly. This approach although fast at first was a bit lacking, I quickly understood I could fork a theme I like, apply needed changes there and use it on my gh-pages branch. I could get all the fixes from the original theme, share my own take on it and keep everything nice, clean and versioned. The only question here was if I want to still use brume?
 
 I decided to use a theme called lagom. One of the changes I've applied on my fork was syntax highlighting.
 

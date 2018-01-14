@@ -7,7 +7,7 @@ tags: kotlin fp design
 disqus: true
 ---
 
-It's been around 4 months since [Mobilization 2017](http://2017.mobilization.pl/) and I'm still watching the talks I missed during the conference. One of the presentations I really enjoyed was "Functional approach to Android architecture using Kotlin" by Jorge Castillo.
+It's been around 4 months since [Mobilization 2017](http://2017.mobilization.pl/) and I'm still watching the talks I missed during the conference. One of the presentations I really enjoyed was *"Functional approach to Android architecture using Kotlin"* by Jorge Castillo.
 
 I was surprised it's available not only on [JUG Łódź youtube channel](https://www.youtube.com/channel/UCS5yGVNI9HfkGz9EngOLqIQ) but also on [academy.realm.io](https://academy.realm.io/posts/mobilization-2017-jorge-castillo-functional-android-architecture-kotlin/) with a full transcript (sic!). I strongly suggest you check it out on their site.
 
@@ -15,13 +15,13 @@ Everything would be fine if not for one sentence in the description of the talk:
 
 > "Kotlin is arising as one of the most powerful functional languages".
 
-Imho this is a bit of exaggeration, especially unfair for Scala, Clojure and ETA. I even checked what did we have in the description on the Mobilization site:
+Imho this is a bit of exaggeration, especially unfair for *Scala*, *Clojure* and *ETA*. I even checked what did we have in the description on the Mobilization site:
 
 > "Modern languages with functional colours are mainstream lately. Kotlin is arising as one of the most powerful ones"
 
-Ok, so it was "most powerful with functional colours". Someone just did an unfortunate mental shortcut when writing the description, regardless this "most powerful" thing made me think. Is Kotlin really that powerful and how one defines programming language power?
+Ok, so it was *"most powerful with functional colours"*. Someone just did an unfortunate mental shortcut when writing the description, regardless this "most powerful" thing made me think. Is Kotlin really that powerful and how one defines programming language power?
 
-Starting with advantages. Kotlin's syntax is much more concise than Java's (for me it's the main selling point on the JVM, after years of working with Java 6). Language allows for standalone functions, they are still objects in disguise (this is JVM we are talking about here) but there is a really nice syntax for declaring and invoking them. Is this enough to contend the title of "most powerful" functional language?
+Starting with advantages. Kotlin's syntax is much more concise than Java's (for me it's the main selling point on the JVM, after years of working with Java 6). Language allows for standalone functions, they are still objects in disguise (this is JVM we are talking about here) but there is a really nice syntax for declaring and invoking them. Is this enough to contend the title of *"most powerful"* functional language?
 
 **I think not.** Kotlin is limited by its syntax and design decisions, in other words, FP was IMHO not it's primary vision of usage. (I don't say that was necessarily a bad decision!)
 
@@ -53,7 +53,7 @@ infix fun <A, B, C> ((A) -> B).andThen(f: (B) -> C): (A) -> C =
         }
 ```
 
-now we can write our baz function differently:
+now we can write our `baz` function differently:
 
 ```kotlin
 val baz2 = ::foo andThen ::bar
@@ -110,7 +110,7 @@ fun <A, B, C> uncurry(f: (A) -> (B) -> C): (A, B) -> C =
 val uncurriedPlus: (Int, Int) -> Int = uncurry(curriedPlus)
 ```
 
-Yet again external libraries have our back [here](https://github.com/arrow-kt/arrow/blob/3fdf22311dbdf07c68ee73ab05cd2f21561d6636/arrow-core/src/main/kotlin/arrow/core/predef.kt) and [here](https://github.com/MarioAriasC/funKTionale/wiki/Currying). I know that the beauty is in the eye of the beholder, but there is some ugliness in Kotlin syntax if we want to work with curried forms of functions. It's visible in the `uncurry` implementation, where we had to call the curried function like this `f(a)(b)`.
+Yet again external libraries have our backs [here](https://github.com/arrow-kt/arrow/blob/3fdf22311dbdf07c68ee73ab05cd2f21561d6636/arrow-core/src/main/kotlin/arrow/core/predef.kt) and [here](https://github.com/MarioAriasC/funKTionale/wiki/Currying). I know that the beauty is in the eye of the beholder, but there is some ugliness in Kotlin syntax if we want to work with curried forms of functions. It's visible in the `uncurry` implementation, where we had to call the curried function like this `f(a)(b)`.
 
 I think Brian Lonsdorf called it "weird butt looking thing" in one his [JS FP talks](https://www.youtube.com/watch?v=m3svKOdZijA), it's hard to disagree with the description. Still, I understand why it looks like this and it's much much much (I can't even express how much) better than Java's `f.apply(a).apply(b)`.
 

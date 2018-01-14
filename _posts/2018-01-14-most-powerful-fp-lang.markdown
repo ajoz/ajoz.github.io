@@ -261,3 +261,5 @@ I won't deny that I would pick it over Java any day of a month, but I can't agre
 We managed to add all the missing but needed functionality through library functions and extensions, but the language and its stdlib didn't support everything out the box.
 
 Syntax tailored more towards **DSL's** might prove less readable in FP context, but it doesn't mean it won't be possible to do FP with it (as we easily demonstrated). Kotlin does not equal effortless FP but is powerful in its own right.
+
+You can play with the code examples on [github](https://github.com/ajoz/fp-concepts-jvm/blob/master/kotlin/src/main/kotlin/io/github/ajoz/functions/PointFree.kt).

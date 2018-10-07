@@ -1,8 +1,7 @@
-pre { 
-    white-space: pre; 
-    overflow: auto; 
+pre {
+  white-space: pre; overflow: auto;
 }
 
-code, pre { 
-    font-family: Monaco, Menlo, Consolas, "Courier New" ,monospace; 
+code, pre {
+  font-family: Monaco, Menlo, Consolas, "Courier New" ,monospace;
 }

@@ -107,7 +107,7 @@ Git is very smart, it can honor executable bits of the files it keeps the histor
 > 
 > A repository, however, may be on a filesystem that handles the filemode correctly, and this variable is set to true when created, but later may be made accessible from another environment that loses the filemode (e.g. exporting ext4 via CIFS mount, visiting a Cygwin created repository with Git for Windows or Eclipse). In such a case it may be necessary to set this variable to false.
 
-Ok, this explains a lot, initially the repository was created on Ubuntu with an ext4 filesystem but was then copied to an external hard drive with an NTFS. NTFS does not have a notion of such permissions and they are lost when doing the copy. This caused all the problems.
+Ok, this explains a lot, initially the repository was created on Ubuntu with an ext4 filesystem but was then copied to an external hard drive with an NTFS. NTFS does not have a notion of such permissions and they are lost when doing the copy. This caused all the problems. Next time I should use a permission preserving tool like `tar` instead.
 
 I can use `git config` and just disable the core file mode completely.
 
@@ -130,6 +130,7 @@ or do it via `~/.gitconfig` file:
 But do I really want to change it globally? I think this can be done smarter without `git status` and `awk` or changes to `.gitconfig`. Git allows to list all the files with a simple `git ls-files`.
 
 ```
+
 $ git ls-files
 .gitignore
 404.html
@@ -139,16 +140,19 @@ LICENSE
 README.md
 _config.yml
 _data/theme.yml
+
 ```
 
 Now the `awk` part is not needed anymore. I can just simply create an alias for the command in the `~/.bashrc` file:
 
 ```bash
-# Fix Git File Permissions
+
+# Git Remove Execution Bit
 # Usually after copying repo to an external NTFS drive, file permissions are changed
 # to 755 (execute bits) from 644, this in turn marks all files as changed in git status
-# which causes a lot of confusion and returns output old mode/new mode.
-alias fgp="git ls-files | xargs -r -n 1 chmod -x"
+# which causes a lot of confusion and returns "old mode/new mode" as output.
+alias greb="git ls-files | xargs -r -n 1 chmod -x"
+
 ```
 
-Now it can be easily run anywhere file permissions are messed by just calling `fgp`. Hope this helps you.
+Now it can be easily run anywhere file permissions are messed up, by just calling `greb`. Hope this helps you.

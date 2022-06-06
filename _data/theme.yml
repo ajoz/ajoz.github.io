@@ -1,7 +1,7 @@
-# Theme customization - please change from the defaults!
+# Theme customization:
 
 # Color for fa-icons, links, etc
-highlight_color: '#3498db'
+highlight_color: '#3257d1'
 
 # Disqus configuration (provide short name - disabled if not provided)
 disqus_shortname: ajoz
@@ -16,7 +16,8 @@ social:
   twitter: _ajoz_
   #facebook: ajoz
   #tumblr: ajoz
-  #linkedin: andrzejjozwiak
+  #email: test@example.com
+  linkedin: andrzej-jóźwiak-12a36a195
   #gplus:
   #flickr: 
 
@@ -29,14 +30,11 @@ keywords: programming, java, scala, kotlin, jvm, functional programming
 # Charset
 charset: utf-8
 
-# Publicly visible email that will be used on the site
-email: test@example.com
-
 # Text shown on the sidebar below the logo
 tagline: "For every complex problem there is an answer that is clear, simple and wrong!"
 
 # Date shown in the footer of the posts
-copywrite: 2017
+copywrite: 2022
 
 # Google Analytics key e.g.: UA-xxxx-x, leave blank to ignore 
 google_analytics_key:

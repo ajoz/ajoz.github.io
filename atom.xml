@@ -10,7 +10,9 @@
  <id>{{ site.url }}</id>
  <author>
    <name>{{ site.data.theme.author }}</name>
-   <email>{{ site.data.theme.email }}</email>
+   {% if site.data.theme.social.email %}
+   <email>{{ site.data.theme.social.email }}</email>
+   {% endif %}
  </author>
 
  {% for post in site.posts %}

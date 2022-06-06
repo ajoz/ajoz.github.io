@@ -3,13 +3,13 @@ layout: post
 date: 30-11-2021
 author: Andrzej Jóźwiak
 title: When your intuitions are wrong
-tags: kotlin jvm mocking testing tests mocks mockk mockito
+tags: kotlin mocking testing tests mocks mockk mockito jvm
 disqus: true
 ---
 
 Recently I was asked by one of my colleagues for help with some failing unit tests. On the surface level it did not seem very complex, it seemed just like a simple copy paste mistake. [Mocking library](https://mockk.io/) verification was reporting that a method was not called.
 
-```
+```kotlin
 Verification failed: call 1 of 1: Foo(#1).removeListener(eq(foo_1_key), eq(io.github.ajoz.capturing.Bar$foo3Listener$1@38f4800d))). No matching calls found.
 
 Calls to same method:
@@ -164,7 +164,7 @@ internal class MockitoBarTest {
 
 With persistence worthy of a better cause I awaited the results. 
 
-```
+```kotlin
 BUILD SUCCESSFUL in 1s
 3 actionable tasks: 2 executed, 1 up-to-date
 12:11:13 AM: Task execution finished ':test --tests "io.github.ajoz.capturing.MockitoBarTest.Check if listener is added and removed"'.
@@ -173,3 +173,4 @@ BUILD SUCCESSFUL in 1s
 Ok. Success. At least I confirmed that it is not outlandish to expect argument capturing to work like this but this really made me think how hard is to write good tools. One needs to know other existing solutions and what intuitions will the users bring from them. I scanned the Mockk tutorials in hopes of proving that I cannot read with understanding (which would not be that hard) but I could not find anything about such peculiar slot behaviour.
 
 So everything is fine as long there is a big explanation in the tutorial? Not necessarily, because to be completely frank I don't know how long I will remember about it. I don't know how long anyone will remember about this. This is a very out of ordinary behaviour which shows just how much magic is done behind a thin veil of a familiar looking API. Maybe API can look too familiar for its own good? As a tool designer one should avoid fighting with intuitions as this will lead to lots of confusion.
+

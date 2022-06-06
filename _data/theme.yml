@@ -23,15 +23,18 @@ social:
 
 # Author (name and surname of the site author, used in the header section)
 author: Andrzej Jóźwiak
-# Description of the site
-description: My blog about programming, software engineering and my hobbies
-# Keywords (although its not used by google its used by some search engines)
-keywords: programming, java, scala, kotlin, jvm, functional programming
-# Charset
-charset: utf-8
 
 # Text shown on the sidebar below the logo
 tagline: "For every complex problem there is an answer that is clear, simple and wrong!"
+
+# Description of the site
+description: My blog about programming, software engineering and my hobbies
+
+# Keywords (although its not used by google its used by some search engines)
+keywords: programming, java, scala, kotlin, jvm, functional programming
+
+# Charset
+charset: utf-8
 
 # Date shown in the footer of the posts
 copywrite: 2022
@@ -44,3 +47,9 @@ show_disclaimer: true
 
 # Toggle link/icon to view atom feed (/atom.xml) in sidebar
 show_atom_feed: true
+
+# Toggle related posts section
+show_related_posts: true
+
+# Toggle latest posts section
+show_latest_posts: true

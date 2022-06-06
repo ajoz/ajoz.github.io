@@ -3,7 +3,7 @@ layout: post
 date: 02-11-2021
 author: Andrzej Jóźwiak
 title: Guardians of the Jekyll-axy Vol. 2
-tags: linux jekyll
+tags: jekyll github-pages linux
 disqus: true
 ---
 

@@ -3,7 +3,7 @@ layout: post
 date: 07-09-2017
 author: Andrzej Jóźwiak
 title: Another adventure with Jekyll - Linux edition
-tags: linux jekyll
+tags: jekyll github-pages linux
 disqus: true
 ---
 

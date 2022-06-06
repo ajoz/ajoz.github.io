@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Jekyll on Windows
+title: Installing Jekyll - Windows edition
 author: Andrzej Jóźwiak
-tags: windows jekyll github-pages
+tags: jekyll github-pages windows
 date: 28-06-2014
 disqus: true
 ---

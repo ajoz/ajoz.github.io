@@ -3,7 +3,7 @@ layout: post
 date: 07-07-2014
 author: Andrzej Jóźwiak
 title: Confitura 2014 afterthoughts
-tags: confitura conference java scala
+tags: confitura conference
 disqus: true
 ---
 

@@ -3,7 +3,7 @@ layout: post
 date: 09-11-2017
 author: Andrzej Jóźwiak
 title: 4Developers Łódź afterthoughts
-tags: 4developers conference java jvm agile
+tags: 4developers conference
 disqus: true
 ---
 
